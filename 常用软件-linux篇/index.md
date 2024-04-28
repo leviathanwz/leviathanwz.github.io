@@ -113,7 +113,9 @@
 ## 图形显示(wayland)
 * dunst/libnotify(通知服务器/通知显示)
 * Alacritty(支持GPU加速的终端)
+* foot(轻量级终端)
 * wofi(启动器)
+* rofi-wayland(启动器)
 * river(动态窗口管理器)
 * sway(平铺窗口管理器)
 * waybar(顶部bar显示)
@@ -121,6 +123,9 @@
 * sway(平铺窗口管理器)
 * wl-clipboard(剪贴板)
 * flameshot/grim(截图工具)
+* waylock(锁屏)
+* lswt(列出当前的wayland窗口)
+* kanshi(输出配置管理)
 
 ## 开发软件
 ### 环境管理
