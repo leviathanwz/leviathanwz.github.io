@@ -183,10 +183,12 @@
 * BIOS超频
 * cpupower(cpu性能调整)
 * intel-undervolt(cpu降压工具)
+
 ## 游戏
 > 本质上是通过vulkan(一种多媒体图形接口)来运行DirectX游戏
-* proton
-* lutris
-* dxvk(将dx转换为vulkan的转换层，使得wine可以在linux下运行3D游戏)
+* proton（首选）
+* bottles(次选)
+* lutris / wine-ge（再次选，lutris有自己的解决方案，wine-ge是结合了proton的lutris）
+> * dxvk(将dx转换为vulkan的转换层，使得wine可以在linux下运行3D游戏)
 * mongohub(帧数显示)
 
