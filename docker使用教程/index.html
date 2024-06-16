@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/leviathanion.github.io\/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B\/"
-        },"genre": "posts","keywords": "Docker, 软件使用教程","wordcount":  3598 ,
+        },"genre": "posts","keywords": "Docker, 软件使用教程","wordcount":  3872 ,
         "url": "https:\/\/leviathanion.github.io\/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B\/","datePublished": "2023-04-29T11:03:25+08:00","dateModified": "2023-04-29T11:03:25+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -121,7 +121,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker使用教程</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>loveLzz</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>软件使用教程</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-29">2023-04-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3598 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-29">2023-04-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3872 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -167,7 +167,9 @@
     </li>
     <li><a href="#dokcer使用技巧">dokcer使用技巧</a>
       <ul>
-        <li><a href="#更新docker景象">更新docker景象</a></li>
+        <li><a href="#更新docker镜像">更新docker镜像</a></li>
+        <li><a href="#自动更新docker镜像">自动更新docker镜像</a></li>
+        <li><a href="#自动更新podman镜像">自动更新podman镜像</a></li>
         <li><a href="#container访问host网络">container访问host网络</a></li>
       </ul>
     </li>
@@ -720,13 +722,127 @@ Docker默认提供几种网络模式：bridge（桥接模式）、host（主机�
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="dokcer使用技巧">dokcer使用技巧</h2>
-<h3 id="更新docker景象">更新docker景象</h3>
+<h3 id="更新docker镜像">更新docker镜像</h3>
 <ol>
 <li><code>docker-compose pull</code></li>
 <li><code>docker-compose up -d --remove-orphans</code></li>
 <li><code>docker image prune</code></li>
 </ol>
-<h3 id="container访问host网络">container访问host网络</h3>
+<h3 id="自动更新docker镜像">自动更新docker镜像</h3>
+<ul>
+<li>运行<code>watchtower</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ docker run --detach <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --name watchtower <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --volume /var/run/docker.sock:/var/run/docker.sock <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    containrrr/watchtower
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>使用docker-compose</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl">  <span class="n">watchtower</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">image</span><span class="p">:</span> <span class="n">containrrr</span><span class="o">/</span><span class="n">watchtower</span><span class="p">:</span><span class="n">latest</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tty</span><span class="p">:</span> <span class="bp">true</span>
+</span></span><span class="line"><span class="cl">    <span class="n">container_name</span><span class="p">:</span> <span class="n">watchtower</span>
+</span></span><span class="line"><span class="cl">    <span class="n">restart</span><span class="p">:</span> <span class="n">unless</span><span class="o">-</span><span class="n">stopped</span>
+</span></span><span class="line"><span class="cl">    <span class="n">environment</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="o">-</span> <span class="n">WATCHTOWER_CLEANUP</span><span class="o">=</span><span class="bp">true</span>
+</span></span><span class="line"><span class="cl">      <span class="o">-</span> <span class="n">WATCHTOWER_POLL_INTERVAL</span><span class="o">=</span><span class="mi">3600</span>
+</span></span><span class="line"><span class="cl">      <span class="o">-</span> <span class="n">WATCHTOWER_ROLLING_RESTART</span><span class="o">=</span><span class="bp">true</span>
+</span></span><span class="line"><span class="cl">    <span class="n">volumes</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="o">-</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span><span class="p">:</span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="自动更新podman镜像">自动更新podman镜像</h3>
+<ol>
+<li>为需要更新的容器添加标签<code>io.containers.autoupdate=registry/local</code></li>
+<li>为该容器创建systemd服务</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># root</span>
+</span></span><span class="line"><span class="cl">sudo podman generate systemd --new --name container_name &gt; /etc/systemd/system/container_name.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># rootless</span>
+</span></span><span class="line"><span class="cl">podman generate systemd --new --name container_name &gt; ~/.config/systemd/user/container_name.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>使用systemctl开启容器服务</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1"># 使用podman停止服务</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># root</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">daemon</span><span class="o">-</span><span class="n">reload</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">SERVICE_NAME</span><span class="o">.</span><span class="n">service</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># rootless</span>
+</span></span><span class="line"><span class="cl"><span class="n">systemctl</span> <span class="o">--</span><span class="n">user</span> <span class="n">daemon</span><span class="o">-</span><span class="n">reload</span>
+</span></span><span class="line"><span class="cl"><span class="n">systemctl</span> <span class="o">--</span><span class="n">user</span> <span class="n">enable</span> <span class="n">SERVICE_NAME</span><span class="o">.</span><span class="n">service</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>开启自动更新服务</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> podman-auto-update.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者手动自动更新</span>
+</span></span><span class="line"><span class="cl">podman auto-update
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="container访问host网络">container访问host网络</h3>
 <ul>
 <li>使用<code>host</code>模式</li>
 <li>使用<code>host.docker.internal</code>作为ip地址</li>

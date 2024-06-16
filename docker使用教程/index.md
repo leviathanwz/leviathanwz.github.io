@@ -274,16 +274,75 @@ services:
       - 6379:6379
 ```
 ## dokcer使用技巧
-### 更新docker景象
+### 更新docker镜像
 1. `docker-compose pull`
 2. `docker-compose up -d --remove-orphans`
 3. `docker image prune`
+
+### 自动更新docker镜像
+* 运行`watchtower`  
+```shell
+$ docker run --detach \
+    --name watchtower \
+    --volume /var/run/docker.sock:/var/run/docker.sock \
+    containrrr/watchtower
+```
+* 使用docker-compose
+```
+  watchtower:
+    image: containrrr/watchtower:latest
+    tty: true
+    container_name: watchtower
+    restart: unless-stopped
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=3600
+      - WATCHTOWER_ROLLING_RESTART=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+```
+
+### 自动更新podman镜像
+1. 为需要更新的容器添加标签`io.containers.autoupdate=registry/local`
+2. 为该容器创建systemd服务
+```shell
+# root
+sudo podman generate systemd --new --name container_name > /etc/systemd/system/container_name.service
+
+# rootless
+podman generate systemd --new --name container_name > ~/.config/systemd/user/container_name.service
+```
+
+3. 使用systemctl开启容器服务
+```
+# 使用podman停止服务
+
+# root
+sudo systemctl daemon-reload
+sudo systemctl enable SERVICE_NAME.service
+
+# rootless
+systemctl --user daemon-reload
+systemctl --user enable SERVICE_NAME.service
+
+```
+
+4. 开启自动更新服务
+```shell
+sudo systemctl enable podman-auto-update.service
+
+# 或者手动自动更新
+podman auto-update
+```
+
+
 ### container访问host网络
 * 使用`host`模式
 * 使用`host.docker.internal`作为ip地址
 > Linux系统需要添加`--add-host=host.docker.internal:host-gateway`到启动命令中
 >
 > `docker-compose`需要在容器定义中添加如下配置:
+>
 > ```
 > extra_hosts:
     - "host.docker.internal:host-gateway"
