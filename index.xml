@@ -7,6 +7,14 @@
             <webMaster>chu.quntao@gmail.com (loveLzz)</webMaster><lastBuildDate>Thu, 14 Sep 2023 17:16:03 &#43;0800</lastBuildDate>
             <atom:link href="https://leviathanion.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>计算机书籍推荐</title>
+    <link>https://leviathanion.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/</link>
+    <pubDate>Thu, 14 Sep 2023 17:16:03 &#43;0800</pubDate>
+    <author>loveLzz</author>
+    <guid>https://leviathanion.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/</guid>
+    <description><![CDATA[计算机书籍推荐 sicp 架构设计 Designing Data-Intensive Applications Clean Architecture: A Craftsman&rsquo;s Guide to Software Structure and Design 领域驱动设计 企业应用架构模式 凤凰架构 设计模式 MIT6.824 手边书 on java java并发编程之美 实战java高]]></description>
+</item>
+<item>
     <title>Systemd配置</title>
     <link>https://leviathanion.github.io/systemd%E9%85%8D%E7%BD%AE/</link>
     <pubDate>Mon, 21 Aug 2023 10:35:37 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
     <description><![CDATA[Docker使用教程 Docker架构 image(镜像)：可以看作是一个root文件系统，是对环境和软件的包装 container(容器)：镜像]]></description>
-</item>
-<item>
-    <title>Zsh配置教程</title>
-    <link>https://leviathanion.github.io/zsh%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link>
-    <pubDate>Thu, 06 Apr 2023 09:40:51 &#43;0800</pubDate>
-    <author>loveLzz</author>
-    <guid>https://leviathanion.github.io/zsh%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[Zsh配置教程 安装zsh 安装zsh-autosuggestions(自动建议插件) 安装zsh-syntax-highlighting(代码高]]></description>
 </item>
 </channel>
 </rss>
