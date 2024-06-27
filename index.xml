@@ -39,6 +39,14 @@
     <description><![CDATA[Linux触摸板配置 libinput libinput是一个函数库，在 Wayland 上用来接收设备的输入，在 X.Org 上提供输入设备的驱动。它提供对设备事件的检测和接收。对输入]]></description>
 </item>
 <item>
+    <title>中台高扩展实践</title>
+    <link>https://leviathanion.github.io/%E4%B8%AD%E5%8F%B0%E9%AB%98%E6%89%A9%E5%B1%95%E5%AE%9E%E8%B7%B5/</link>
+    <pubDate>Sun, 11 Jun 2023 15:06:06 &#43;0800</pubDate>
+    <author>loveLzz</author>
+    <guid>https://leviathanion.github.io/%E4%B8%AD%E5%8F%B0%E9%AB%98%E6%89%A9%E5%B1%95%E5%AE%9E%E8%B7%B5/</guid>
+    <description><![CDATA[中台高扩展实战 扩展点 基于Spring Bean的扩展点 使用流程： 编写扩展点类 该类实现扩展点接口 该类添加扩展点注解（可能包括了扩展点定位信息）来]]></description>
+</item>
+<item>
     <title>设计模式</title>
     <link>https://leviathanion.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
     <pubDate>Sun, 11 Jun 2023 14:38:20 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/fcitx5%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[Fcitx5安装 安装fcitx5 安装中文addon：fcitx5-chinese-addons 安装qt支持：fcitx5-qt 安装gtk支持]]></description>
-</item>
-<item>
-    <title>Docker使用教程</title>
-    <link>https://leviathanion.github.io/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
-    <pubDate>Sat, 29 Apr 2023 11:03:25 &#43;0800</pubDate>
-    <author>loveLzz</author>
-    <guid>https://leviathanion.github.io/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[Docker使用教程 Docker架构 image(镜像)：可以看作是一个root文件系统，是对环境和软件的包装 container(容器)：镜像]]></description>
 </item>
 </channel>
 </rss>

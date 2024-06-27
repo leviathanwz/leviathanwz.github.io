@@ -13,6 +13,14 @@
     <description><![CDATA[计算机书籍推荐 sicp 架构设计 Designing Data-Intensive Applications Clean Architecture: A Craftsman&rsquo;s Guide to Software Structure and Design 领域驱动设计 企业应用架构模式 凤凰架构 设计模式 MIT6.824 手边书 on java java并发编程之美 实战java高]]></description>
 </item>
 <item>
+    <title>中台高扩展实践</title>
+    <link>https://leviathanion.github.io/%E4%B8%AD%E5%8F%B0%E9%AB%98%E6%89%A9%E5%B1%95%E5%AE%9E%E8%B7%B5/</link>
+    <pubDate>Sun, 11 Jun 2023 15:06:06 &#43;0800</pubDate>
+    <author>loveLzz</author>
+    <guid>https://leviathanion.github.io/%E4%B8%AD%E5%8F%B0%E9%AB%98%E6%89%A9%E5%B1%95%E5%AE%9E%E8%B7%B5/</guid>
+    <description><![CDATA[中台高扩展实战 扩展点 基于Spring Bean的扩展点 使用流程： 编写扩展点类 该类实现扩展点接口 该类添加扩展点注解（可能包括了扩展点定位信息）来]]></description>
+</item>
+<item>
     <title>设计模式</title>
     <link>https://leviathanion.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
     <pubDate>Sun, 11 Jun 2023 14:38:20 &#43;0800</pubDate>
