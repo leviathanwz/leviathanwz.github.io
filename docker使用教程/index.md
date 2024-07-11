@@ -345,7 +345,7 @@ podman auto-update
 >
 > ```
 > extra_hosts:
-    - "host.docker.internal:host-gateway"
+>    - "host.docker.internal:host-gateway"
 > ```
 
 
