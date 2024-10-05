@@ -10,7 +10,17 @@
     <pubDate>Fri, 28 Oct 2022 10:11:28 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/cross-encoder%E5%92%8Cbi-encoder%E4%BB%A5%E5%8F%8A%E5%8F%8C%E5%A1%94%E6%A8%A1%E5%9E%8B%E5%92%8C%E5%AD%AA%E7%94%9F%E7%BD%91%E7%BB%9C/</guid>
-    <description><![CDATA[cross-encoder 将query与document交叉输入到encoder中，得到一个得分 使用该得分作为相似度 bi-encoder 将query与document分别输入到两个e]]></description>
+    <description><![CDATA[<h1 id="cross-encoder">cross-encoder</h1>
+<ul>
+<li>将query与document交叉输入到encoder中，得到一个得分</li>
+<li>使用该得分作为相似度</li>
+</ul>
+<h1 id="bi-encoder">bi-encoder</h1>
+<ul>
+<li>将query与document分别输入到两个encoder中，得到两个得分</li>
+<li>使用两个得分进行相似度计算</li>
+</ul>
+<p><figure><a class="lightgallery" href="/encoder/Bi_vs_Cross-Encoder.png" title="Bi_vs_Cross-Encoder" data-thumbnail="/encoder/Bi_vs_Cross-Encoder.png" data-sub-html="<h2>Bi_vs_Cross-Encoder</h2><p>Bi_vs_Cross-Encoder</p>]]></description>
 </item>
 <item>
     <title>SimKGC</title>
@@ -18,7 +28,31 @@
     <pubDate>Fri, 01 Jul 2022 13:37:07 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/simkgc/</guid>
-    <description><![CDATA[SimKGC模型 Novelty 使用InfoNCE损失改进原有边际排名损失，使其更专注于hard negative 使用IB,PB和SN三种负样本种类来增加负样本数量 使用图]]></description>
+    <description><![CDATA[<h1 id="simkgc模型">SimKGC模型</h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>使用InfoNCE损失改进原有边际排名损失，使其更专注于hard negative</li>
+<li>使用IB,PB和SN三种负样本种类来增加负样本数量</li>
+<li>使用图结构重排序来感知图结构</li>
+</ul>
+<h2 id="问题和动机">问题和动机</h2>
+<ul>
+<li>最新的基于文本（预训练模型）的方法可以访问到额外的输入信息
+<ul>
+<li>归纳学习到训练过中看不到的实体的表示</li>
+</ul>
+</li>
+<li>但性能仍然大幅弱于基于嵌入的方法
+<ul>
+<li>基于文本的方法中对比学习的效率过低，主要是负样本太少</li>
+<li>基于嵌入的方法不涉及昂贵的文本编码计算，因此可以使用大量负样本</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>同一时间
+默认配置下，RotatE在Wikidata5M数据集上可以训练<strong>1000</strong>个负样本为<strong>64</strong>的epoch
+基于文本的方法KEPLER只能训练<strong>30</strong>个epoch，负样本数量为<strong>1</strong></p>]]></description>
 </item>
 <item>
     <title>PairRE</title>
@@ -26,7 +60,14 @@
     <pubDate>Thu, 09 Jun 2022 18:40:24 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/pairre/</guid>
-    <description><![CDATA[PairRE Novelty 既考虑了复杂关系建模的问题，又考虑了多种模式的关系 通过修改RotatE的公式，将关系参数改为头尾两个，从而可以对复杂关系进行建模(Rot]]></description>
+    <description><![CDATA[<h1 id="pairre">PairRE</h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>既考虑了复杂关系建模的问题，又考虑了多种模式的关系</li>
+<li>通过修改RotatE的公式，将关系参数改为头尾两个，从而可以对复杂关系进行建模(RotatE本身就可以对多种模式关系建模)</li>
+</ul>
+<blockquote>
+<p>根据本文分析，RotatE本身可以对N-1关系建模，但是不能对1-N和N-N关系建模</p>]]></description>
 </item>
 <item>
     <title>KBGAN</title>
@@ -34,7 +75,54 @@
     <pubDate>Thu, 09 Jun 2022 18:40:16 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/kbgan/</guid>
-    <description><![CDATA[KBGAN模型1 Novelty 首次使用生成对抗网路的思想，全篇关注负样本的生成质量问题 采用生成对抗网络，采用概率模型作为生成器，采用距离模型作为鉴别器，]]></description>
+    <description><![CDATA[<h1 id="kbgan模型1">KBGAN模型<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>首次使用生成对抗网路的思想，全篇关注负样本的生成质量问题</li>
+<li>采用生成对抗网络，采用概率模型作为生成器，采用距离模型作为鉴别器，训练鉴别器</li>
+<li>使用强化学习的策略梯度方法来训练生成器</li>
+</ul>
+<h2 id="问题和动机">问题和动机</h2>
+<ul>
+<li>过去知识图谱嵌入领域的负采样仅仅根据概率来采样有以下两个问题
+<ul>
+<li>假负样本问题，有可能会有正确样本被当成负样本来采样</li>
+<li>低质量负样本问题，会产生一些质量很低的，对训练意义不大的样本(很容易与正样本区分开的样本，对训练贡献很小)</li>
+</ul>
+</li>
+<li>收到对抗生成网络思想的影响，本文采用生成器来生成高质量负样本，采用鉴别器来计算嵌入
+<ul>
+<li>生成器使用基于概率的log-loss损失</li>
+<li>鉴别器使用基于距离的margin-loss损失</li>
+<li>由于存在离散的生成过程，因此不能使用基于梯度的方法进行优化，本文采用强化学习中的方差减少方法来进行优化。</li>
+</ul>
+</li>
+</ul>
+<h2 id="相关工作">相关工作</h2>
+<ul>
+<li>GAN最早用于生成图像
+<ul>
+<li>生成器接受噪声输入并输出图像</li>
+<li>鉴别器是一种分类器，将图像分类为真和假。</li>
+<li>训练GAN时，生成器试图生成真实图像来欺骗鉴别器，鉴别器试图将其与真是图像区分开。</li>
+<li>GAN还能够生成满足特定要求的样本</li>
+</ul>
+</li>
+<li>用于自然语言处理
+<ul>
+<li>梯度传播不适用于离散采样的步骤，因此不能使用原始GAN来生成离散样本，如自然语言句子或三元组</li>
+<li>SEQGAN使用强化学习来解决离散问题，使用了策略梯度和其他技巧来训练生成器。</li>
+</ul>
+</li>
+<li>鉴别器不一定是分类器。后来很多方法使用回归器作为鉴别器。</li>
+</ul>
+<h2 id="过去的解决方法">过去的解决方法</h2>
+<ul>
+<li>过去采用随机替换来生成负样本，但这样容易产生低质量的样本</li>
+<li>对于log-softmax损失函数而言，通常会为一个正样本产生很多个负样本，因此总有高质量的负样本可以使用，因此低质量样本的影响不大</li>
+</ul>
+<blockquote>
+<p>论文<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>(ComplEx)研究表明，当采用100：1的负/正比例会使得效果更佳</p>]]></description>
 </item>
 <item>
     <title>CAKE</title>
@@ -42,7 +130,18 @@
     <pubDate>Wed, 25 May 2022 15:27:53 &#43;0800</pubDate>
     <author>loveLZZ</author>
     <guid>https://leviathanion.github.io/cake/</guid>
-    <description><![CDATA[CAKE模型1 Novelty 首次既考虑了假阴性问题，又考虑了低质量的问题，特别是假阴性问题几乎无人考虑 将数据集做一定的处理，进行标注，为每个实体赋予一到]]></description>
+    <description><![CDATA[<h1 id="cake模型1">CAKE模型<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>首次既考虑了假阴性问题，又考虑了低质量的问题，特别是假阴性问题几乎无人考虑</li>
+<li>将数据集做一定的处理，进行标注，为每个实体赋予一到多个概念</li>
+<li>基于概念生成常识，也即（概念，关系，概念）的三元组为常识1和（概念组，关系，概念组）为常识2</li>
+<li>使用域采样的假设，分别对1-N中1和N中的采用不同的采样方式，首先选取概念，然后从概念组中生成负样本</li>
+<li>最后链路预测选择实体时，选择符合常识1的概念中的实体</li>
+</ul>
+<h2 id="问题和动机">问题和动机</h2>
+<blockquote>
+<p>本论文主要关注KGE中存在的问题</p>]]></description>
 </item>
 <item>
     <title>QRNN</title>
@@ -50,7 +149,34 @@
     <pubDate>Sat, 19 Feb 2022 10:09:43 &#43;0800</pubDate>
     <author>loveLZZ</author>
     <guid>https://leviathanion.github.io/qrnn/</guid>
-    <description><![CDATA[QRNN1 Novelty 将RNN与CNN结合 卷积层用一种不使用未来数据的masked卷积来代替LSTM中参数矩阵与上一时刻隐藏层相乘的操作。捕获过去时刻信息的同]]></description>
+    <description><![CDATA[<h1 id="qrnn1">QRNN<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>将RNN与CNN结合
+<ul>
+<li>卷积层用一种不使用未来数据的masked卷积来代替LSTM中参数矩阵与上一时刻隐藏层相乘的操作。捕获过去时刻信息的同时简化了LSTM中的的操作，因为在计算过程中删除了隐藏层，仅仅使用输入数据来捕获依赖</li>
+<li>池化层使用各种门结构，例如LSTM的门结构和GRU的门结构使得梯度流稳定</li>
+</ul>
+</li>
+<li>通过上述操作简化了LSTM的计算，使其可以并行</li>
+</ul>
+<h2 id="问题和动机">问题和动机</h2>
+<ul>
+<li><strong>标准的RNN包括门变种LSTM</strong>等因为<strong>无法并行计算</strong>，因此在<strong>长序列</strong>的任务中性能受到了限制。</li>
+<li>将<strong>CNN</strong>用于序列模型时
+<ul>
+<li><strong>并行性更好</strong></li>
+<li>可以<strong>更好地扩展到长序列</strong></li>
+<li>但因为<strong>最大和平均池化时假设了时间不变性</strong>，（在一次卷积池化过程中，时间步的顺序会被忽略，移动卷积核的过程中，进行相同的池化操作，不同时间步的重要性不同同样也会被忽略）因此无法充分利用<strong>大规模序列的顺序信息</strong>。</li>
+</ul>
+</li>
+<li>因此作者提出了一种将<strong>CNN和RNN混合</strong>的模型QRNN，既能<strong>跨时间步和小批量维度进行并行计算</strong>，又使得<strong>输出取决于总体顺序</strong>。<strong>性能更优秀且更节省时间</strong></li>
+</ul>
+<h2 id="过去的解决方法">过去的解决方法</h2>
+<ul>
+<li>
+<p>将CNN应用到序列模型<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>character-level CNN(NIPS2015)假设了时间不变性，无法利用顺序信息
+<figure><a class="lightgallery" href="/QRNN/character-levelCNN.png" title="character-levelCNN模型" data-thumbnail="/QRNN/character-levelCNN.png" data-sub-html="<h2>该模型主要通过多个卷积层和池化层堆叠，沿时间步对序列进行卷积和池化来实现序列信息的捕获</h2><p>character-levelCNN模型</p>]]></description>
 </item>
 <item>
     <title>SCRN</title>
@@ -58,7 +184,21 @@
     <pubDate>Thu, 17 Feb 2022 15:42:05 &#43;0800</pubDate>
     <author>loveLZZ</author>
     <guid>https://leviathanion.github.io/scrn/</guid>
-    <description><![CDATA[SCRN模型1 Novelty 通过为RNN添加一个参数缓慢变化的隐藏层来捕获长距离依赖，公式如下所示 \begin{align*} s_t &amp;= (1-\alpha)Bx_t + \alpha s_{t-1} \\ h_t &amp;= \sigma(Ps_t+Ax_t+Rh_{t-1}) \\ y_t &amp;= f(Uh_t+Vs_t) \end{align*} 约束该隐藏层中的B为对]]></description>
+    <description><![CDATA[<h1 id="scrn模型1">SCRN模型<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>通过为RNN添加一个参数缓慢变化的隐藏层来捕获长距离依赖，公式如下所示</li>
+</ul>
+<p>\begin{align*}
+s_t &amp;= (1-\alpha)Bx_t + \alpha s_{t-1}
+\\
+h_t &amp;= \sigma(Ps_t+Ax_t+Rh_{t-1})
+\\
+y_t &amp;= f(Uh_t+Vs_t)
+\end{align*}</p>
+<ul>
+<li>约束该隐藏层中的B为对角矩阵，由于B为对角矩阵，且没有使用激活函数，所以该隐藏层的梯度流稳定
+<figure><a class="lightgallery" href="/SCRN/RNN%E5%92%8CSCRN%E6%9E%B6%E6%9E%84%E5%9B%BE.png" title="RNN和SCRN的架构图" data-thumbnail="/SCRN/RNN%E5%92%8CSCRN%E6%9E%B6%E6%9E%84%E5%9B%BE.png" data-sub-html="<h2>RNN和SCRN的架构图</h2><p>RNN和SCRN的架构图</p>]]></description>
 </item>
 <item>
     <title>矩阵求导</title>
@@ -66,7 +206,9 @@
     <pubDate>Wed, 19 Jan 2022 11:11:45 &#43;0800</pubDate>
     <author>loveLZZ</author>
     <guid>https://leviathanion.github.io/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/</guid>
-    <description><![CDATA[矩阵求导 分子布局和分母布局 标量，向量，矩阵之间的求导，相对于标量对标量的求导，需要考虑一个额外的因素，就是求导之后的布局，例如标量对列向量求]]></description>
+    <description><![CDATA[<h1 id="矩阵求导">矩阵求导</h1>
+<h2 id="分子布局和分母布局">分子布局和分母布局</h2>
+<p>标量，向量，矩阵之间的求导，相对于标量对标量的求导，需要考虑一个额外的因素，就是求导之后的布局，例如标量对列向量求导之后是按照列向量排列还是按照行向量排列并没有一个确切的规定。因此这里我们引入分子布局和分母布局的概念。</p>]]></description>
 </item>
 <item>
     <title>IRNN</title>
@@ -74,7 +216,25 @@
     <pubDate>Thu, 23 Dec 2021 10:27:32 &#43;0800</pubDate>
     <author>loveLZZ</author>
     <guid>https://leviathanion.github.io/irnn/</guid>
-    <description><![CDATA[IRNN模型1 Novelty 专注于解决RNN模型中的梯度消失问题 使用单位矩阵来初始化RNN从而部分解决梯度消失和梯度爆炸问题 使用ReLU激活函数代替Si]]></description>
+    <description><![CDATA[<h1 id="irnn模型1">IRNN模型<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>专注于解决RNN模型中的梯度消失问题</li>
+<li>使用单位矩阵来初始化RNN从而部分解决梯度消失和梯度爆炸问题</li>
+<li>使用ReLU激活函数代替Sigmoid激活函数也用于解决梯度消失问题（要配合第二点，否则很有可能梯度爆炸）</li>
+</ul>
+<h2 id="问题和动机">问题和动机</h2>
+<ul>
+<li><strong>梯度消失</strong>和<strong>梯度爆炸</strong>的问题导致RNN模型难以学习到<strong>远距离依赖</strong></li>
+<li>过去的解决方法依赖于复杂的<strong>优化技术</strong>和<strong>网络架构</strong></li>
+<li>提出一种较为<strong>简单</strong>的方式进行优化</li>
+</ul>
+<h2 id="过去的解决方法">过去的解决方法</h2>
+<ul>
+<li>用<strong>Hessian-Free</strong>来代替<strong>SGD</strong><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>（Hessian-Free可以关注到曲率）</li>
+</ul>
+<blockquote>
+<p>虽然效果上有改进，但并不常用，原因可能如下</p>]]></description>
 </item>
 </channel>
 </rss>

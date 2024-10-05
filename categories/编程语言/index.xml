@@ -10,7 +10,65 @@
     <pubDate>Sat, 02 Apr 2022 14:10:51 &#43;0800</pubDate>
     <author>lovelZZ</author>
     <guid>https://leviathanion.github.io/python/</guid>
-    <description><![CDATA[Python学习笔记 1.python基础 1.1python语法常识 python语法采用缩进格式而不是括号来进行代码块分割的 缩进没有空格个数或]]></description>
+    <description><![CDATA[<h1 id="python学习笔记">Python学习笔记</h1>
+<h2 id="1python基础">1.python基础</h2>
+<h3 id="11python语法常识">1.1python语法常识</h3>
+<blockquote>
+<ul>
+<li><strong>python语法采用缩进格式而不是括号来进行代码块分割的</strong></li>
+<li><strong>缩进没有空格个数或者<code>tap</code>键的约束，但应坚持使用<em>四个空格</em>缩进</strong></li>
+<li><strong>当语句以<code>:</code>结尾时，缩进的语句视为代码块</strong></li>
+<li><strong>以#开头的是注释</strong></li>
+<li><strong>复制粘贴功能基本等于失效，粘贴的代码必须检查缩进是否正确</strong></li>
+<li><strong>python是大小写敏感的，写错了大小写，程序会报错</strong></li>
+</ul>
+<blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#print</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+</blockquote>
+<h3 id="12基本数据类型">1.2基本数据类型</h3>
+<hr>
+<h4 id="121数据类型分类">1.2.1数据类型分类</h4>
+<h5 id="1211数字型与非数字型">1.2.1.1数字型与非数字型</h5>
+<ul>
+<li><code>python</code>中的变量一般分为两种类型 <strong>数字型</strong>和<strong>非数字型</strong></li>
+<li><strong>数字型</strong>
+<ul>
+<li><strong>整型</strong></li>
+<li><strong>浮点型</strong></li>
+<li><strong>布尔型</strong></li>
+<li><strong>复数型</strong></li>
+</ul>
+</li>
+<li><strong>非数字型</strong>
+<ul>
+<li><strong>字符串</strong></li>
+<li><strong>列表（list）</strong></li>
+<li><strong>元组(tuple)</strong></li>
+<li><strong>字典(dict)</strong></li>
+</ul>
+</li>
+</ul>
+<h5 id="1212不可变类型与可变类型">1.2.1.2不可变类型与可变类型</h5>
+<blockquote>
+<p><code>python</code>中变量都是通过对数据的引用来定义的。</p>]]></description>
 </item>
 <item>
     <title>C&#43;&#43;学习笔记</title>
@@ -18,7 +76,34 @@
     <pubDate>Tue, 22 Mar 2022 20:53:07 &#43;0800</pubDate>
     <author>loveLZZ</author>
     <guid>https://leviathanion.github.io/c/</guid>
-    <description><![CDATA[C++学习笔记 C++简单特性 编译型语言，不是解释性 源代码的可移植性，但可执行程序不跨平台 由C++核心语言特征以及标准库两个组件构成 核心语言特]]></description>
+    <description><![CDATA[<h1 id="c学习笔记">C++学习笔记</h1>
+<h2 id="c简单特性">C++简单特性</h2>
+<ul>
+<li><strong>编译型语言</strong>，不是解释性</li>
+<li>源代码的可移植性，但可执行程序不跨平台</li>
+<li>由C++核心语言特征以及标准库两个组件构成
+<ul>
+<li><strong>核心语言特性</strong>例如内建类型和循环</li>
+<li><strong>标准库</strong>是由各个C++实现提供源代码，能够由C++本身实现（自举），例如容器或者I/O库等</li>
+</ul>
+</li>
+<li><strong>静态类型语言</strong></li>
+</ul>
+<h3 id="函数">函数</h3>
+<ul>
+<li>函数必须要<strong>提前声明</strong></li>
+<li>函数的参数名字会被编译器<strong>忽略</strong></li>
+<li>编译时会发生参数类型检查或者<strong>隐形变量类型转换</strong></li>
+<li>类的成员函数，<strong>类名也是成员函数类型的一部分</strong></li>
+<li>两个函数具有同样的名字（<strong>函数重载</strong>）
+<ul>
+<li>但具有不同的参数，编译器会自动选择最合适的。</li>
+<li>两者在调用时没有过分的区别，会报错ambiguous</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>基于可维护性的原则，应该让程序可理解，首先需要将任务分解为函数和类的模块</p>]]></description>
 </item>
 </channel>
 </rss>

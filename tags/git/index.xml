@@ -10,7 +10,12 @@
     <pubDate>Mon, 25 Jan 2021 20:53:07 &#43;0800</pubDate>
     <author>loveLZZ</author>
     <guid>https://leviathanion.github.io/git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[Git使用教程 基本概念 git将本地文件的管理分为三个区域工作区，暂存区，仓库区，同时可以通过远程代码仓库等服务器来管理git如下图所示 git]]></description>
+    <description><![CDATA[<h1 id="git使用教程">Git使用教程</h1>
+<h2 id="基本概念">基本概念</h2>
+<ul>
+<li>git将本地文件的管理分为三个区域<strong>工作区</strong>，<strong>暂存区</strong>，<strong>仓库区</strong>，同时可以通过<strong>远程代码仓库</strong>等服务器来管理git如下图所示</li>
+</ul>
+<p><figure><a class="lightgallery" href="/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/gitoverview.png" title="git分区" data-thumbnail="/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/gitoverview.png" data-sub-html="<h2>git总览</h2><p>git分区</p>]]></description>
 </item>
 </channel>
 </rss>

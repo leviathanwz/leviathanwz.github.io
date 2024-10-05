@@ -7,7 +7,7 @@
         <title>矩阵求导 - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="矩阵求导">
-  <meta property="og:description" content="矩阵求导 分子布局和分母布局 标量，向量，矩阵之间的求导，相对于标量对标量的求导，需要考虑一个额外的因素，就是求导之后的布局，例如标量对列向量求">
+  <meta property="og:description" content="矩阵求导 分子布局和分母布局 标量，向量，矩阵之间的求导，相对于标量对标量的求导，需要考虑一个额外的因素，就是求导之后的布局，例如标量对列向量求导之后是按照列向量排列还是按照行向量排列并没有一个确切的规定。因此这里我们引入分子布局和分母布局的概念。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="矩阵求导">
-  <meta name="twitter:description" content="矩阵求导 分子布局和分母布局 标量，向量，矩阵之间的求导，相对于标量对标量的求导，需要考虑一个额外的因素，就是求导之后的布局，例如标量对列向量求">
+  <meta name="twitter:description" content="矩阵求导 分子布局和分母布局 标量，向量，矩阵之间的求导，相对于标量对标量的求导，需要考虑一个额外的因素，就是求导之后的布局，例如标量对列向量求导之后是按照列向量排列还是按照行向量排列并没有一个确切的规定。因此这里我们引入分子布局和分母布局的概念。">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/" /><link rel="prev" href="https://leviathanion.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%B9%B6%E8%A1%8C%E7%AD%96%E7%95%A5/" /><link rel="next" href="https://leviathanion.github.io/scrn/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -215,34 +215,34 @@ $$
 </li>
 </ul>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">自变量/因变量</th>
-<th style="text-align:center">标量$y$</th>
-<th style="text-align:center">$m$维列向量$\mathbf{y}$</th>
-<th style="text-align:center">$m \times n$维矩阵$Y$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><strong>标量$x$</strong></td>
-<td style="text-align:center">/</td>
-<td style="text-align:center">$\frac{\partial \mathbf{y}}{\partial x}$<br>分子布局：$m$维列向量<br>分母布局：$m$维行向量</td>
-<td style="text-align:center">分子布局：$m \times n$维矩阵<br>分母布局：$n \times m$维矩阵</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>$m$维列向量$\mathbf{x}$</strong></td>
-<td style="text-align:center">$\frac{\partial y}{\partial \mathbf{x}}$<br>分子布局：$m$维行向量<br>分母布局：$m$维列向量</td>
-<td style="text-align:center">$\frac{\partial \mathbf{y}}{\partial \mathbf{x}}$<br>分子布局：$m \times n$维矩阵<br>分母布局：$n \times m$维矩阵</td>
-<td style="text-align:center">/</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>$m \times n$维矩阵$X$</strong></td>
-<td style="text-align:center">$\frac{\partial y}{X}$<br>分子布局：$n \times m$维矩阵<br>分母布局：$m \times n$维矩阵</td>
-<td style="text-align:center">/</td>
-<td style="text-align:center">/</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">自变量/因变量</th>
+          <th style="text-align: center">标量$y$</th>
+          <th style="text-align: center">$m$维列向量$\mathbf{y}$</th>
+          <th style="text-align: center">$m \times n$维矩阵$Y$</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>标量$x$</strong></td>
+          <td style="text-align: center">/</td>
+          <td style="text-align: center">$\frac{\partial \mathbf{y}}{\partial x}$<br>分子布局：$m$维列向量<br>分母布局：$m$维行向量</td>
+          <td style="text-align: center">分子布局：$m \times n$维矩阵<br>分母布局：$n \times m$维矩阵</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>$m$维列向量$\mathbf{x}$</strong></td>
+          <td style="text-align: center">$\frac{\partial y}{\partial \mathbf{x}}$<br>分子布局：$m$维行向量<br>分母布局：$m$维列向量</td>
+          <td style="text-align: center">$\frac{\partial \mathbf{y}}{\partial \mathbf{x}}$<br>分子布局：$m \times n$维矩阵<br>分母布局：$n \times m$维矩阵</td>
+          <td style="text-align: center">/</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>$m \times n$维矩阵$X$</strong></td>
+          <td style="text-align: center">$\frac{\partial y}{X}$<br>分子布局：$n \times m$维矩阵<br>分母布局：$m \times n$维矩阵</td>
+          <td style="text-align: center">/</td>
+          <td style="text-align: center">/</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="求导方法--微分法">求导方法&ndash;微分法</h2>
 <blockquote>
@@ -319,7 +319,7 @@ $$df = \sum\limits_{i=1}^m \sum\limits_{j=1}^n\frac{\partial f}{\partial X_{i,j}
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

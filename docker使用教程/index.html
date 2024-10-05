@@ -7,7 +7,7 @@
         <title>Docker使用教程 - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="Docker使用教程">
-  <meta property="og:description" content="Docker使用教程 Docker架构 image(镜像)：可以看作是一个root文件系统，是对环境和软件的包装 container(容器)：镜像">
+  <meta property="og:description" content="Docker使用教程 Docker架构 image(镜像)：可以看作是一个root文件系统，是对环境和软件的包装 container(容器)：镜像类似于类，容器类似于实例 repository(仓库)：镜像库 Docker基本使用 启动本地dokcer软件 sudo systemctl start docker 通用 查看所占空间docker system df repository使用 获取imagedocker pull [选项] [仓库地址[:端口号]/仓库名[:标签]] 不加仓库地址，默认为docker hub image管理 列出本机的image文件:docker image ls 根据容器生成image文件:docker commit [选项] &lt;容器名ID或容器名&gt; [&lt;仓库名&gt;[:&lt;标签&gt;]] 删除本机的image文件:docker image rm [imageName] 删除所有处于停止状态的image:docker image prune container管理 文件管理 列出本机运行的container文件:docker container ls 列出本机所有的container文件:docker container ls --all 导出容器:docker export &lt;containerID&gt; &gt; *.tar 导入容器:docker import *.tar &lt;镜像名&gt;:&lt;标签&gt; 删除本机的container文件:docker container rm &lt;containerID&gt; 清理所有处于停止状态的容器:docker container prune 运行管理 启动容器:docker run [选项] [imageName] [sh终端] 选项可以省略 -p 本地端口号：docker端口号端口映射 -d后台运行不进入 -i是允许交互式操作 -t是终端 进入容器:docker exec -it &lt;容器名/id&gt; [sh终端] 终止容器:docker container stop &lt;容器名/id&gt; 启动已终止容器:docker container start &lt;容器名/id&gt; 重启容器:docker container restart &lt;容器名/id&gt; 网络管理 概述 Docker容器的网络允许容器间、容器与宿主机、以及容器与外部网络的通信。 Docker默认提供几种网络模式：bridge（桥接模式）、host（主机模式）、none（无网络）和overlay（覆盖网络）。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="Docker使用教程">
-  <meta name="twitter:description" content="Docker使用教程 Docker架构 image(镜像)：可以看作是一个root文件系统，是对环境和软件的包装 container(容器)：镜像">
+  <meta name="twitter:description" content="Docker使用教程 Docker架构 image(镜像)：可以看作是一个root文件系统，是对环境和软件的包装 container(容器)：镜像类似于类，容器类似于实例 repository(仓库)：镜像库 Docker基本使用 启动本地dokcer软件 sudo systemctl start docker 通用 查看所占空间docker system df repository使用 获取imagedocker pull [选项] [仓库地址[:端口号]/仓库名[:标签]] 不加仓库地址，默认为docker hub image管理 列出本机的image文件:docker image ls 根据容器生成image文件:docker commit [选项] &lt;容器名ID或容器名&gt; [&lt;仓库名&gt;[:&lt;标签&gt;]] 删除本机的image文件:docker image rm [imageName] 删除所有处于停止状态的image:docker image prune container管理 文件管理 列出本机运行的container文件:docker container ls 列出本机所有的container文件:docker container ls --all 导出容器:docker export &lt;containerID&gt; &gt; *.tar 导入容器:docker import *.tar &lt;镜像名&gt;:&lt;标签&gt; 删除本机的container文件:docker container rm &lt;containerID&gt; 清理所有处于停止状态的容器:docker container prune 运行管理 启动容器:docker run [选项] [imageName] [sh终端] 选项可以省略 -p 本地端口号：docker端口号端口映射 -d后台运行不进入 -i是允许交互式操作 -t是终端 进入容器:docker exec -it &lt;容器名/id&gt; [sh终端] 终止容器:docker container stop &lt;容器名/id&gt; 启动已终止容器:docker container start &lt;容器名/id&gt; 重启容器:docker container restart &lt;容器名/id&gt; 网络管理 概述 Docker容器的网络允许容器间、容器与宿主机、以及容器与外部网络的通信。 Docker默认提供几种网络模式：bridge（桥接模式）、host（主机模式）、none（无网络）和overlay（覆盖网络）。">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" /><link rel="prev" href="https://leviathanion.github.io/zsh%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" /><link rel="next" href="https://leviathanion.github.io/fcitx5%E5%AE%89%E8%A3%85/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/leviathanion.github.io\/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B\/"
-        },"genre": "posts","keywords": "Docker, 软件使用教程","wordcount":  3873 ,
+        },"genre": "posts","keywords": "Docker, 软件使用教程","wordcount":  3984 ,
         "url": "https:\/\/leviathanion.github.io\/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B\/","datePublished": "2023-04-29T11:03:25+08:00","dateModified": "2023-04-29T11:03:25+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -121,7 +121,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker使用教程</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>loveLzz</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>软件使用教程</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-29">2023-04-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3873 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-29">2023-04-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3984 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -282,8 +282,11 @@ Docker默认提供几种网络模式：bridge（桥接模式）、host（主机�
 </ul>
 <h2 id="podman">Podman</h2>
 <ul>
-<li>Podman与docker完全兼容，只需要将docker命令里的docker更换为Podman即可</li>
+<li>Podman与docker几乎完全兼容，只需要将docker命令里的docker更换为Podman即可</li>
 </ul>
+<blockquote>
+<p>访问宿主机port的方式有所不同，podman开箱即用，使用<code>host.containers.internal</code>即可，而dokcer需要经过特殊的extra_hosts配置，然后使用<code>host.docker.internal</code></p>
+</blockquote>
 <h2 id="docker-compose">docker-compose</h2>
 <p>dokcer-compose是本地docker服务编排工具，用于定义和管理多个docker服务。</p>
 <h3 id="常用命令">常用命令</h3>
@@ -889,7 +892,7 @@ Docker默认提供几种网络模式：bridge（桥接模式）、host（主机�
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

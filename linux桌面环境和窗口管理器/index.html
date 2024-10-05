@@ -7,7 +7,7 @@
         <title>Linux桌面环境和窗口管理器 - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/linux%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%E5%92%8C%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86%E5%99%A8/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="Linux桌面环境和窗口管理器">
-  <meta property="og:description" content="Linux桌面环境和窗口管理器 Desktop Environment(DE)1 一般情况下DE包含WM，比如Gnome3的默认WM是Mutter，KDE5的默认WM是KWin。主流的桌面">
+  <meta property="og:description" content="Linux桌面环境和窗口管理器 Desktop Environment(DE)1 一般情况下DE包含WM，比如Gnome3的默认WM是Mutter，KDE5的默认WM是KWin。主流的桌面环境都提供了大量自带的桌面组件来构成其完整的桌面体验。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="Linux桌面环境和窗口管理器">
-  <meta name="twitter:description" content="Linux桌面环境和窗口管理器 Desktop Environment(DE)1 一般情况下DE包含WM，比如Gnome3的默认WM是Mutter，KDE5的默认WM是KWin。主流的桌面">
+  <meta name="twitter:description" content="Linux桌面环境和窗口管理器 Desktop Environment(DE)1 一般情况下DE包含WM，比如Gnome3的默认WM是Mutter，KDE5的默认WM是KWin。主流的桌面环境都提供了大量自带的桌面组件来构成其完整的桌面体验。">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/linux%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%E5%92%8C%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86%E5%99%A8/" /><link rel="prev" href="https://leviathanion.github.io/dkms/" /><link rel="next" href="https://leviathanion.github.io/linux%E5%8F%91%E8%A1%8C%E7%89%88%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -168,70 +168,70 @@ Wayland上桌面合成器和窗口管理器是同一个东西</li>
 </ul>
 </blockquote>
 <table>
-<thead>
-<tr>
-<th>环境</th>
-<th>介绍</th>
-<th>优点</th>
-<th>缺点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GNOME</td>
-<td>GNOME（/ɡˈnoʊm/）是一个完全由自由软件组成的桌面环境。它的目标操作系统是Linux，但是大部分的BSD系统亦支持GNOME。</td>
-<td>1.简单易用, 2.可通过扩展插件支持非常丰富的功能</td>
-<td>1.耗用内存、CPU资源较多; 2.插件安装与管理略显繁琐，需要通过网络浏览器下载。</td>
-</tr>
-<tr>
-<td>Unity</td>
-<td>一款与Ubuntu分分离离的桌面环境，最初是2011年支持Ubuntu的商业公司Canonical Ltd开发的，但在2017年的Ubuntu 17.10放弃Unity7而选择了GNOME，但在2020年的Ubuntu 20.04又重新启用了Unity7，并且起名为Ubuntu Unity，而且令人惊讶的是让Unity7能够起死回生的开发者是一位10岁的少年，他的名字叫Rudra Saraswat。</td>
-<td>与GNOME一样的易用，少量的定制选项，让我们可以开箱即用。</td>
-<td>并没有解决GNOME的缺点，插件管理依然需要一个稍微繁琐的步骤来实现安装</td>
-</tr>
-<tr>
-<td>Cinnamon</td>
-<td>与Unity一样，它也是GNOME的亲兄弟，Linux Mint团队因对GNOME3的改进无法接受，因而Fork出了一个分支，这就是Cinnamon，它的目标是让用户可以获得开箱即用用户界面。</td>
-<td>1.界面非常优美，简单易用; 2.内置配置管理器可以非常方便的管理插件、主题、小工具等； 2.丰富的选项让定制变得非常简单</td>
-<td>要说缺点就是BUG可能会稍多一些，而且2016年2月20日，未知黑客入侵Linux Mint网站也让用户对其安全性也比较担心(虽然此事与Cinnamon并无关系)。</td>
-</tr>
-<tr>
-<td>MATE</td>
-<td>MATE(/ˈmɑːteɪ/)桌面环境是 GNOME 2 的延续。</td>
-<td>1.轻量级的GNOME，资源占用少; 2.适合老电脑、配置低的电脑设备;</td>
-<td>正因为继承自GNOME 2，对于很多GNOME 3的新功能已经无法支持，但是主流系统还是会提供适配MATE桌面环境的系统，例如Ubuntu MATE</td>
-</tr>
-<tr>
-<td>KDE Plasma</td>
-<td>一款庞大而复杂的桌面环境，使用Qt开发，开发社区一直以来都是非常活跃，并且没有想GNOME有很多的分支，界面开发接口非常统一。</td>
-<td>功能非常强大、高度可定制，更加现代化的用户界面。</td>
-<td>1.正因为功能强大，带来的复杂性也使得普通用户使用起来有些不知所措; 2.漂亮的外观也带来了更多的内存和CPU资源的占用。</td>
-</tr>
-<tr>
-<td>Xfce</td>
-<td>一个轻量级的桌面环境，与GNOME一样，Xfce也基于GTK工具包开发，目标是快速轻巧，同时在视觉上仍然有吸引力并且易于使用。</td>
-<td>1. 轻量级; 2.Xfce遵守标准，尤其是在freedesktop.org上定义的标准; 3.内存和CPU资源占用非常少(非常适合老笔记本、嵌入式设备等)</td>
-<td>1.外观上有些简陋; 2.内置应用很少。</td>
-</tr>
-<tr>
-<td>LXDE</td>
-<td>使用GTK工具包编写，旨在提供一个快速且节能的桌面环境。所以与Xfce非常相似。主要活跃地区为台湾地区。</td>
-<td>1.轻量级。</td>
-<td>1.外观简陋。</td>
-</tr>
-<tr>
-<td>LXQt</td>
-<td>一款GTK和Qt融合的桌面环境，产生原因是LXDE团队不满于GTK+3的不向下兼容等诸多问题，因而转向了Qt框架。与LXDE一样，主要活跃地区为台湾地区。截至2020年4月24日的稳定版为0.15.0。</td>
-<td>1.轻量级。</td>
-<td>1.外观简陋。</td>
-</tr>
-<tr>
-<td>DeepinDE</td>
-<td>深度系统（Deepin）的桌面环境，由中国的武汉深之度科技有限公司(简称深度科技)为主要开发厂商。它使用Qt开发。</td>
-<td>1.非常漂亮的用户界面; 2.内置很多Windows平台应用软件，更适合中国用户的使用习惯。</td>
-<td>1.资源占用较多; 2.使用过程中的BUG较多，不过都在被逐步解决。</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">环境</th>
+          <th style="text-align: left">介绍</th>
+          <th style="text-align: left">优点</th>
+          <th style="text-align: left">缺点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">GNOME</td>
+          <td style="text-align: left">GNOME（/ɡˈnoʊm/）是一个完全由自由软件组成的桌面环境。它的目标操作系统是Linux，但是大部分的BSD系统亦支持GNOME。</td>
+          <td style="text-align: left">1.简单易用, 2.可通过扩展插件支持非常丰富的功能</td>
+          <td style="text-align: left">1.耗用内存、CPU资源较多; 2.插件安装与管理略显繁琐，需要通过网络浏览器下载。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Unity</td>
+          <td style="text-align: left">一款与Ubuntu分分离离的桌面环境，最初是2011年支持Ubuntu的商业公司Canonical Ltd开发的，但在2017年的Ubuntu 17.10放弃Unity7而选择了GNOME，但在2020年的Ubuntu 20.04又重新启用了Unity7，并且起名为Ubuntu Unity，而且令人惊讶的是让Unity7能够起死回生的开发者是一位10岁的少年，他的名字叫Rudra Saraswat。</td>
+          <td style="text-align: left">与GNOME一样的易用，少量的定制选项，让我们可以开箱即用。</td>
+          <td style="text-align: left">并没有解决GNOME的缺点，插件管理依然需要一个稍微繁琐的步骤来实现安装</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Cinnamon</td>
+          <td style="text-align: left">与Unity一样，它也是GNOME的亲兄弟，Linux Mint团队因对GNOME3的改进无法接受，因而Fork出了一个分支，这就是Cinnamon，它的目标是让用户可以获得开箱即用用户界面。</td>
+          <td style="text-align: left">1.界面非常优美，简单易用; 2.内置配置管理器可以非常方便的管理插件、主题、小工具等； 2.丰富的选项让定制变得非常简单</td>
+          <td style="text-align: left">要说缺点就是BUG可能会稍多一些，而且2016年2月20日，未知黑客入侵Linux Mint网站也让用户对其安全性也比较担心(虽然此事与Cinnamon并无关系)。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MATE</td>
+          <td style="text-align: left">MATE(/ˈmɑːteɪ/)桌面环境是 GNOME 2 的延续。</td>
+          <td style="text-align: left">1.轻量级的GNOME，资源占用少; 2.适合老电脑、配置低的电脑设备;</td>
+          <td style="text-align: left">正因为继承自GNOME 2，对于很多GNOME 3的新功能已经无法支持，但是主流系统还是会提供适配MATE桌面环境的系统，例如Ubuntu MATE</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">KDE Plasma</td>
+          <td style="text-align: left">一款庞大而复杂的桌面环境，使用Qt开发，开发社区一直以来都是非常活跃，并且没有想GNOME有很多的分支，界面开发接口非常统一。</td>
+          <td style="text-align: left">功能非常强大、高度可定制，更加现代化的用户界面。</td>
+          <td style="text-align: left">1.正因为功能强大，带来的复杂性也使得普通用户使用起来有些不知所措; 2.漂亮的外观也带来了更多的内存和CPU资源的占用。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Xfce</td>
+          <td style="text-align: left">一个轻量级的桌面环境，与GNOME一样，Xfce也基于GTK工具包开发，目标是快速轻巧，同时在视觉上仍然有吸引力并且易于使用。</td>
+          <td style="text-align: left">1. 轻量级; 2.Xfce遵守标准，尤其是在freedesktop.org上定义的标准; 3.内存和CPU资源占用非常少(非常适合老笔记本、嵌入式设备等)</td>
+          <td style="text-align: left">1.外观上有些简陋; 2.内置应用很少。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">LXDE</td>
+          <td style="text-align: left">使用GTK工具包编写，旨在提供一个快速且节能的桌面环境。所以与Xfce非常相似。主要活跃地区为台湾地区。</td>
+          <td style="text-align: left">1.轻量级。</td>
+          <td style="text-align: left">1.外观简陋。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">LXQt</td>
+          <td style="text-align: left">一款GTK和Qt融合的桌面环境，产生原因是LXDE团队不满于GTK+3的不向下兼容等诸多问题，因而转向了Qt框架。与LXDE一样，主要活跃地区为台湾地区。截至2020年4月24日的稳定版为0.15.0。</td>
+          <td style="text-align: left">1.轻量级。</td>
+          <td style="text-align: left">1.外观简陋。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">DeepinDE</td>
+          <td style="text-align: left">深度系统（Deepin）的桌面环境，由中国的武汉深之度科技有限公司(简称深度科技)为主要开发厂商。它使用Qt开发。</td>
+          <td style="text-align: left">1.非常漂亮的用户界面; 2.内置很多Windows平台应用软件，更适合中国用户的使用习惯。</td>
+          <td style="text-align: left">1.资源占用较多; 2.使用过程中的BUG较多，不过都在被逐步解决。</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="追求华丽硬件配置较高">追求华丽，硬件配置较高</h3>
 <ul>
@@ -370,7 +370,7 @@ Wayland上桌面合成器和窗口管理器是同一个东西</li>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

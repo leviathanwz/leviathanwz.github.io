@@ -10,7 +10,69 @@
     <pubDate>Thu, 06 Apr 2023 09:40:51 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/zsh%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[Zsh配置教程 安装zsh 安装zsh-autosuggestions(自动建议插件) 安装zsh-syntax-highlighting(代码高]]></description>
+    <description><![CDATA[<h1 id="zsh配置教程">Zsh配置教程</h1>
+<ul>
+<li>安装zsh</li>
+<li>安装zsh-autosuggestions(自动建议插件)</li>
+<li>安装zsh-syntax-highlighting(代码高亮插件)</li>
+<li>安装zsh-theme-powerlevel10k(主题)
+<ul>
+<li>配置完成后，可使用<code>p10k</code>命令调整配置，具体可看<code>p10k --help</code></li>
+</ul>
+</li>
+<li>更改默认sh<code>chsh -s /bin/zsh</code></li>
+<li>当不存在.zshrc文件时，会自动启动<code>zsh-newuser-install</code>来进行初始化设置
+<ul>
+<li>如果未出现或者希望重新配置，可以按如下命令执行</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">autoload -Uz zsh-newuser-install
+</span></span><span class="line"><span class="cl">zsh-newuser-install -f
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>在<code>zsh-newuser-install</code>中配置的默认补全，等效于在.zshrc中添加如下</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">autoload</span> <span class="o">-</span><span class="n">Uz</span> <span class="n">compinit</span>
+</span></span><span class="line"><span class="cl"><span class="n">compinit</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>若不想自己配置，可以安装<code>grml-zsh-config</code></li>
+</ul>
+</li>
+<li>在~/.zshrc中添加如下代码，启用插件和主题</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+</span></span><span class="line"><span class="cl">source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+</span></span><span class="line"><span class="cl">source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="zsh配置conda">zsh配置conda</h2>
+<ul>
+<li>cd anaconda的安装目录下的bin目录</li>
+<li>执行conda init zsh <code>conda init zsh</code></li>
+</ul>
+<blockquote>
+<p>优化conda速度(注释掉费时代码)：</p>]]></description>
 </item>
 </channel>
 </rss>

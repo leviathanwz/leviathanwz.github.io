@@ -10,7 +10,41 @@
     <pubDate>Tue, 07 Mar 2023 09:06:22 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E8%AE%A2%E9%98%85/</guid>
-    <description><![CDATA[代理工具订阅 订阅链接 早期很多机场会直接提供完整的配置文件供用户下载, 在浏览器中访问机场提供的订阅链接可以看到就是一份完整的 Clash 配置文件. 不过这]]></description>
+    <description><![CDATA[<h1 id="代理工具订阅">代理工具订阅</h1>
+<h2 id="订阅链接">订阅链接</h2>
+<ul>
+<li>早期很多机场会直接提供完整的配置文件供用户下载, 在浏览器中访问机场提供的订阅链接可以看到就是一份完整的 Clash 配置文件.</li>
+<li>不过这种方式需要传输的数据量不小, 并且随着规则集越来越复杂全面, 配置文件的体积也在膨胀, 直接提供完整配置文件的方式逐渐过时.</li>
+<li>现在很多机场提供的订阅链接是Base64编码格式的节点信息, 由代理客户端软件 (Clash for Windows, ClashX, V2RayW 等) 根据这些节点信息自己生成配置文件. 这种做法大大减小了数据传输量, 效率更高.</li>
+</ul>
+<h2 id="url格式">URL格式</h2>
+<ul>
+<li>不同的协议的梯子提供了不同的链接格式</li>
+<li>现在大多数的订阅链接是一堆节点信息链接格式的Base64编码，需要由客户端自行进行订阅转换</li>
+<li>一些节点也提供了自己的订阅转换服务，可以直接下载最终的配置文件</li>
+</ul>
+<h2 id="clash订阅转换">clash订阅转换</h2>
+<ul>
+<li>Clash 配置文件为 YAML 格式, 主要包含三个部分的信息:
+<ul>
+<li>代理配置: 包括暴露的代理端口, DNS 配置等</li>
+<li>节点配置: 代理服务器地址, 端口号和用户信息</li>
+<li>规则配置: 分流规则配置, 决定哪些流量直连/阻断/代理</li>
+</ul>
+</li>
+<li>订阅转换服务, 其实就是解析机场提供的节点信息, 并加上一些代理配置和规则配置, 最终生成一份完整的 Clash 订阅的过程.</li>
+</ul>
+<h2 id="开源订阅转换工具">开源订阅转换工具</h2>
+<ul>
+<li>当然不同的代理工具拥有不同的配置文件，也就需要不同的订阅转换服务</li>
+<li>开源订阅转换工具subconverter<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>提供了不同的代理工具的订阅转换功能</li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://github.com/tindy2013/subconverter" target="_blank" rel="noopener noreffer">https://github.com/tindy2013/subconverter</a>
+&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>]]></description>
 </item>
 </channel>
 </rss>

@@ -7,7 +7,7 @@
         <title>Tmux使用教程 - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="Tmux使用教程">
-  <meta property="og:description" content="Tmux使用教程 会话管理 新建会话tmux new -s &lt;session-name&gt; 列出所有会话tmux ls或者Ctrl&#43;b s 退出会话tmux detach或者Ctrl&#43;b d 接入会">
+  <meta property="og:description" content="Tmux使用教程 会话管理 新建会话tmux new -s &lt;session-name&gt; 列出所有会话tmux ls或者Ctrl&#43;b s 退出会话tmux detach或者Ctrl&#43;b d 接入会话tmux attach -t &lt;编号&gt;/&lt;session-name&gt; 杀死对话tmux kill-session -t &lt;编号&gt;/&lt;session-name&gt; 切换会话tmux switch -t &lt;编号&gt;/&lt;session-name&gt; 重命名会话tmux rename-session -t &lt;编号&gt;/&lt;session-name&gt;或者Ctrl&#43;b $ 窗口管理 创建一个新的窗口Ctrl&#43;b c 列出所有窗口Ctrl&#43;b w 重命名当前窗口Ctrl&#43;b , 窗格管理 划分左右两个窗格Ctrl&#43;b % 划分上下两个窗格Ctrl&#43;b &#34; 移动窗格Ctrl&#43;b 方向键 关闭当前窗格Ctrl&#43;b x 调整窗格大小Ctrl&#43;b Ctrl&#43;方向键 使用技巧 鼠标支持Ctrl &#43; b :set mouse on ">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="Tmux使用教程">
-  <meta name="twitter:description" content="Tmux使用教程 会话管理 新建会话tmux new -s &lt;session-name&gt; 列出所有会话tmux ls或者Ctrl&#43;b s 退出会话tmux detach或者Ctrl&#43;b d 接入会">
+  <meta name="twitter:description" content="Tmux使用教程 会话管理 新建会话tmux new -s &lt;session-name&gt; 列出所有会话tmux ls或者Ctrl&#43;b s 退出会话tmux detach或者Ctrl&#43;b d 接入会话tmux attach -t &lt;编号&gt;/&lt;session-name&gt; 杀死对话tmux kill-session -t &lt;编号&gt;/&lt;session-name&gt; 切换会话tmux switch -t &lt;编号&gt;/&lt;session-name&gt; 重命名会话tmux rename-session -t &lt;编号&gt;/&lt;session-name&gt;或者Ctrl&#43;b $ 窗口管理 创建一个新的窗口Ctrl&#43;b c 列出所有窗口Ctrl&#43;b w 重命名当前窗口Ctrl&#43;b , 窗格管理 划分左右两个窗格Ctrl&#43;b % 划分上下两个窗格Ctrl&#43;b &#34; 移动窗格Ctrl&#43;b 方向键 关闭当前窗格Ctrl&#43;b x 调整窗格大小Ctrl&#43;b Ctrl&#43;方向键 使用技巧 鼠标支持Ctrl &#43; b :set mouse on ">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" /><link rel="prev" href="https://leviathanion.github.io/simkgc/" /><link rel="next" href="https://leviathanion.github.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6-windows%E7%AF%87/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -194,7 +194,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

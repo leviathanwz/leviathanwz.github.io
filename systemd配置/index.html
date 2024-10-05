@@ -7,7 +7,10 @@
         <title>Systemd配置 - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/systemd%E9%85%8D%E7%BD%AE/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="Systemd配置">
-  <meta property="og:description" content="Systemd配置 一、由来 历史上，Linux 的启动一直采用init 进程。 下面的命令用来启动服务。 1 2 3 $ sudo /etc/init.d/apache2 start # 或者 $ service apache2 start 这种方法有两个缺">
+  <meta property="og:description" content="Systemd配置 一、由来 历史上，Linux 的启动一直采用init 进程。
+下面的命令用来启动服务。
+1 2 3 $ sudo /etc/init.d/apache2 start # 或者 $ service apache2 start 这种方法有两个缺点。
+一是启动时间长。init进程是串行启动，只有前一个进程启动完，才会启动下一个进程。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -19,7 +22,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="Systemd配置">
-  <meta name="twitter:description" content="Systemd配置 一、由来 历史上，Linux 的启动一直采用init 进程。 下面的命令用来启动服务。 1 2 3 $ sudo /etc/init.d/apache2 start # 或者 $ service apache2 start 这种方法有两个缺">
+  <meta name="twitter:description" content="Systemd配置 一、由来 历史上，Linux 的启动一直采用init 进程。
+下面的命令用来启动服务。
+1 2 3 $ sudo /etc/init.d/apache2 start # 或者 $ service apache2 start 这种方法有两个缺点。
+一是启动时间长。init进程是串行启动，只有前一个进程启动完，才会启动下一个进程。">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/systemd%E9%85%8D%E7%BD%AE/" /><link rel="prev" href="https://leviathanion.github.io/linux%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86/" /><link rel="next" href="https://leviathanion.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -1017,7 +1023,7 @@ Unit 配置文件的完整字段清单，请参考<a href="https://www.freedeskt
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

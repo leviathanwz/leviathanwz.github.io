@@ -76,7 +76,8 @@ Docker默认提供几种网络模式：bridge（桥接模式）、host（主机�
 * 运行新容器时使用：`docker run --network container:<container_name_or_id> nginx`
 
 ## Podman
-* Podman与docker完全兼容，只需要将docker命令里的docker更换为Podman即可
+* Podman与docker几乎完全兼容，只需要将docker命令里的docker更换为Podman即可
+> 访问宿主机port的方式有所不同，podman开箱即用，使用`host.containers.internal`即可，而dokcer需要经过特殊的extra_hosts配置，然后使用`host.docker.internal`
 
 ## docker-compose
 dokcer-compose是本地docker服务编排工具，用于定义和管理多个docker服务。

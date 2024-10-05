@@ -10,7 +10,105 @@
     <pubDate>Tue, 28 Mar 2023 12:28:10 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/nfcrfididic%E5%8D%A1%E7%A7%91%E6%99%AE/</guid>
-    <description><![CDATA[NFC,RFID,IC,ID科普 RFID RFID是(Radio Frequency Identification)射频识别技术的缩写，一般用来在读卡器和标签之间通信。]]></description>
+    <description><![CDATA[<h1 id="nfcrfidicid科普">NFC,RFID,IC,ID科普</h1>
+<h2 id="rfid">RFID</h2>
+<ul>
+<li>RFID是(Radio Frequency Identification)射频识别技术的缩写，一般用来在读卡器和标签之间通信。</li>
+<li>RFID中，读卡器和标签是独立的两个实体，不能切换。不支持点对点</li>
+<li>频率可高可低,低频(125KHz,135Khz),高频(13.56MHz),超高频（860MHz到960MHz)</li>
+<li>频段不同，导致功率不同，导致传输的距离不同。</li>
+<li>按照有无电源，标签可分为
+<ul>
+<li>有源:可能含纽扣电池</li>
+<li>无源:无电源</li>
+<li>半有源:在多数情况下处于休眠状态，不工作不向外界发出RFID信号，只有在其进入低频激活器的激活信号范围时，标签被激活后，才开始工作。</li>
+</ul>
+</li>
+</ul>
+<h2 id="nfc">NFC</h2>
+<ul>
+<li>NFC是(Near Field Communicatio)近距离无线通信的缩写，是一种<strong>基于RFID技术的近距离高频率</strong>无线电通信技术。</li>
+<li>NFC是RFID的子集。</li>
+<li>NFC可以有三种模式，模拟卡（标签）、模拟读卡器、点对点。</li>
+<li>通信距离10cm左右</li>
+<li>工作频率13.56MHz，属于高频率</li>
+<li>传输速率106kbps,212kbps,424kbps三个速率中的一个</li>
+</ul>
+<h2 id="id卡">ID卡</h2>
+<ul>
+<li>ID卡是(Identification Card)的缩写，主要进行身份识别</li>
+<li>容量有限，只能存储卡号</li>
+<li>无加密，可以被轻松复制</li>
+<li>频率一般为125KHz，可以使用proxmark3读写</li>
+</ul>
+<h2 id="ic卡">IC卡</h2>
+<ul>
+<li>IC卡是(Integrated Circuit Card)集成电路卡的缩写，里面含有集成电路</li>
+<li>分为接触式和非接触式IC卡。
+<ul>
+<li>接触式指银行卡类似，需要接触才能读卡</li>
+<li>非接触式指饭卡水卡等</li>
+</ul>
+</li>
+<li>容量较大，一般为1k，当然也有2k,4k的容量，CPU卡可达8k</li>
+<li>1K卡可以存储1024个字节的数据,总共拥有<strong>16个扇区</strong></li>
+<li>每个扇区拥有<strong>4个块</strong>,每个块存储<strong>16个字节</strong>的数据</li>
+<li>0扇区的0块和每个扇区的最后一块比较特殊
+<ul>
+<li>0扇区的0块的<strong>前4个字节是这个卡的uid号，全球唯一，不管是否加密，均可以读取</strong></li>
+<li>0扇区的0块后四个字节是<strong>厂商码，不同的厂商不同，使用手环/手机模拟的厂商码会被锁死，不能修改，不能通过较为严格的读卡器</strong></li>
+<li>每个扇区的3块包含三个部分:keyA,控制位,keyB,如果没有密码,前后六位都会是F</li>
+</ul>
+</li>
+<li>根据零扇区零块的不同，可以分为以下卡,一般M1为我们日常使用的卡，CUID为我们复制用的卡
+<ul>
+<li>M1:0扇区0块写死无法更改</li>
+<li>UID:零扇区零块可用电脑和专门工具修改</li>
+<li>CUID:零扇区零块可用NFC修改</li>
+<li>FUID:零扇区零块仅可以写入一次</li>
+<li>UFUID:零扇区零块块可任意写入，但也可以被手动锁定，锁定后无法修改</li>
+</ul>
+</li>
+<li>IC卡各个扇区都可能被加密，加密的扇区需要使用破解才能复制</li>
+</ul>
+<h2 id="如何判断ic卡和id卡">如何判断IC卡和ID卡</h2>
+<ul>
+<li>IC卡为方形线圈，ID卡为圆形线圈</li>
+<li>使用NFC手机读取，如果有反应一般是13.56MHz的IC卡，否则是ID卡或其他频率IC卡</li>
+</ul>
+<h2 id="cpu卡">CPU卡</h2>
+<ul>
+<li>CPU卡的加密性能最好,集成了CPU，ROM，RAM，微型操作系统(COS),用户数据存储器(EEPROM)</li>
+<li>一般用于校园卡，银行卡，身份证等</li>
+<li>最大容量128kB</li>
+</ul>
+<h2 id="cpu模拟m1卡">CPU模拟M1卡</h2>
+<ul>
+<li>使用CPU模拟的M1卡，难以破解</li>
+</ul>
+<h2 id="mifare-classic-tool使用指南">MIFARE Classic Tool使用指南</h2>
+<ul>
+<li>读取标签后，点击工具，可查看卡的SAK号
+<ul>
+<li>08代表M1卡</li>
+<li>20代表CPU卡</li>
+<li>28代表CPU模拟M1卡</li>
+</ul>
+</li>
+<li>08卡可以被破解，28卡看运气</li>
+<li>点击读卡可查看扇区，
+<ul>
+<li>全部显示出来，则无加密，可以直接使用手机读取和模拟</li>
+<li>有部分未加密，需要使用密钥破解或者PCR532来破解</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结">总结</h2>
+<ul>
+<li>IC卡可使用PN532和PCR532(PN532的升级款)来读取，使用CUID卡来模拟</li>
+<li>加密IC卡需要密钥，暴力破解，或者使用变色龙来破解密钥</li>
+<li>ID卡可使用PM3来读取，使用可读写的ID卡来模拟</li>
+</ul>]]></description>
 </item>
 </channel>
 </rss>

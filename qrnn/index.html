@@ -7,7 +7,7 @@
         <title>QRNN - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/qrnn/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="QRNN">
-  <meta property="og:description" content="QRNN1 Novelty 将RNN与CNN结合 卷积层用一种不使用未来数据的masked卷积来代替LSTM中参数矩阵与上一时刻隐藏层相乘的操作。捕获过去时刻信息的同">
+  <meta property="og:description" content="QRNN1 Novelty 将RNN与CNN结合 卷积层用一种不使用未来数据的masked卷积来代替LSTM中参数矩阵与上一时刻隐藏层相乘的操作。捕获过去时刻信息的同时简化了LSTM中的的操作，因为在计算过程中删除了隐藏层，仅仅使用输入数据来捕获依赖 池化层使用各种门结构，例如LSTM的门结构和GRU的门结构使得梯度流稳定 通过上述操作简化了LSTM的计算，使其可以并行 问题和动机 标准的RNN包括门变种LSTM等因为无法并行计算，因此在长序列的任务中性能受到了限制。 将CNN用于序列模型时 并行性更好 可以更好地扩展到长序列 但因为最大和平均池化时假设了时间不变性，（在一次卷积池化过程中，时间步的顺序会被忽略，移动卷积核的过程中，进行相同的池化操作，不同时间步的重要性不同同样也会被忽略）因此无法充分利用大规模序列的顺序信息。 因此作者提出了一种将CNN和RNN混合的模型QRNN，既能跨时间步和小批量维度进行并行计算，又使得输出取决于总体顺序。性能更优秀且更节省时间 过去的解决方法 将CNN应用到序列模型2character-level CNN(NIPS2015)假设了时间不变性，无法利用顺序信息 ">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="QRNN">
-  <meta name="twitter:description" content="QRNN1 Novelty 将RNN与CNN结合 卷积层用一种不使用未来数据的masked卷积来代替LSTM中参数矩阵与上一时刻隐藏层相乘的操作。捕获过去时刻信息的同">
+  <meta name="twitter:description" content="QRNN1 Novelty 将RNN与CNN结合 卷积层用一种不使用未来数据的masked卷积来代替LSTM中参数矩阵与上一时刻隐藏层相乘的操作。捕获过去时刻信息的同时简化了LSTM中的的操作，因为在计算过程中删除了隐藏层，仅仅使用输入数据来捕获依赖 池化层使用各种门结构，例如LSTM的门结构和GRU的门结构使得梯度流稳定 通过上述操作简化了LSTM的计算，使其可以并行 问题和动机 标准的RNN包括门变种LSTM等因为无法并行计算，因此在长序列的任务中性能受到了限制。 将CNN用于序列模型时 并行性更好 可以更好地扩展到长序列 但因为最大和平均池化时假设了时间不变性，（在一次卷积池化过程中，时间步的顺序会被忽略，移动卷积核的过程中，进行相同的池化操作，不同时间步的重要性不同同样也会被忽略）因此无法充分利用大规模序列的顺序信息。 因此作者提出了一种将CNN和RNN混合的模型QRNN，既能跨时间步和小批量维度进行并行计算，又使得输出取决于总体顺序。性能更优秀且更节省时间 过去的解决方法 将CNN应用到序列模型2character-level CNN(NIPS2015)假设了时间不变性，无法利用顺序信息 ">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/qrnn/" /><link rel="prev" href="https://leviathanion.github.io/scrn/" /><link rel="next" href="https://leviathanion.github.io/c/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -400,7 +400,7 @@ $$
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

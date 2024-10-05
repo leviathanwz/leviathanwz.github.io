@@ -10,7 +10,35 @@
     <pubDate>Tue, 05 Jul 2022 11:27:28 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[Tmux使用教程 会话管理 新建会话tmux new -s &lt;session-name&gt; 列出所有会话tmux ls或者Ctrl+b s 退出会话tmux detach或者Ctrl+b d 接入会]]></description>
+    <description><![CDATA[<h1 id="tmux使用教程">Tmux使用教程</h1>
+<h2 id="会话管理">会话管理</h2>
+<ul>
+<li>新建会话<code>tmux new -s &lt;session-name&gt;</code></li>
+<li>列出所有会话<code>tmux ls</code>或者<code>Ctrl+b s</code></li>
+<li>退出会话<code>tmux detach</code>或者<code>Ctrl+b d</code></li>
+<li>接入会话<code>tmux attach -t &lt;编号&gt;/&lt;session-name&gt;</code></li>
+<li>杀死对话<code>tmux kill-session -t &lt;编号&gt;/&lt;session-name&gt;</code></li>
+<li>切换会话<code>tmux switch -t &lt;编号&gt;/&lt;session-name&gt;</code></li>
+<li>重命名会话<code>tmux rename-session -t &lt;编号&gt;/&lt;session-name&gt;</code>或者<code>Ctrl+b $</code></li>
+</ul>
+<h2 id="窗口管理">窗口管理</h2>
+<ul>
+<li>创建一个新的窗口<code>Ctrl+b c</code></li>
+<li>列出所有窗口<code>Ctrl+b w</code></li>
+<li>重命名当前窗口<code>Ctrl+b ,</code></li>
+</ul>
+<h2 id="窗格管理">窗格管理</h2>
+<ul>
+<li>划分左右两个窗格<code>Ctrl+b %</code></li>
+<li>划分上下两个窗格<code>Ctrl+b &quot;</code></li>
+<li>移动窗格<code>Ctrl+b 方向键</code></li>
+<li>关闭当前窗格<code>Ctrl+b x</code></li>
+<li>调整窗格大小<code>Ctrl+b Ctrl+方向键</code></li>
+</ul>
+<h2 id="使用技巧">使用技巧</h2>
+<ul>
+<li>鼠标支持<code>Ctrl + b :set mouse on</code></li>
+</ul>]]></description>
 </item>
 </channel>
 </rss>

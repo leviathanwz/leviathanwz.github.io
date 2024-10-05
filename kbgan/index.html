@@ -7,7 +7,7 @@
         <title>KBGAN - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/kbgan/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="KBGAN">
-  <meta property="og:description" content="KBGAN模型1 Novelty 首次使用生成对抗网路的思想，全篇关注负样本的生成质量问题 采用生成对抗网络，采用概率模型作为生成器，采用距离模型作为鉴别器，">
+  <meta property="og:description" content="KBGAN模型1 Novelty 首次使用生成对抗网路的思想，全篇关注负样本的生成质量问题 采用生成对抗网络，采用概率模型作为生成器，采用距离模型作为鉴别器，训练鉴别器 使用强化学习的策略梯度方法来训练生成器 问题和动机 过去知识图谱嵌入领域的负采样仅仅根据概率来采样有以下两个问题 假负样本问题，有可能会有正确样本被当成负样本来采样 低质量负样本问题，会产生一些质量很低的，对训练意义不大的样本(很容易与正样本区分开的样本，对训练贡献很小) 收到对抗生成网络思想的影响，本文采用生成器来生成高质量负样本，采用鉴别器来计算嵌入 生成器使用基于概率的log-loss损失 鉴别器使用基于距离的margin-loss损失 由于存在离散的生成过程，因此不能使用基于梯度的方法进行优化，本文采用强化学习中的方差减少方法来进行优化。 相关工作 GAN最早用于生成图像 生成器接受噪声输入并输出图像 鉴别器是一种分类器，将图像分类为真和假。 训练GAN时，生成器试图生成真实图像来欺骗鉴别器，鉴别器试图将其与真是图像区分开。 GAN还能够生成满足特定要求的样本 用于自然语言处理 梯度传播不适用于离散采样的步骤，因此不能使用原始GAN来生成离散样本，如自然语言句子或三元组 SEQGAN使用强化学习来解决离散问题，使用了策略梯度和其他技巧来训练生成器。 鉴别器不一定是分类器。后来很多方法使用回归器作为鉴别器。 过去的解决方法 过去采用随机替换来生成负样本，但这样容易产生低质量的样本 对于log-softmax损失函数而言，通常会为一个正样本产生很多个负样本，因此总有高质量的负样本可以使用，因此低质量样本的影响不大 论文2(ComplEx)研究表明，当采用100：1的负/正比例会使得效果更佳">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="KBGAN">
-  <meta name="twitter:description" content="KBGAN模型1 Novelty 首次使用生成对抗网路的思想，全篇关注负样本的生成质量问题 采用生成对抗网络，采用概率模型作为生成器，采用距离模型作为鉴别器，">
+  <meta name="twitter:description" content="KBGAN模型1 Novelty 首次使用生成对抗网路的思想，全篇关注负样本的生成质量问题 采用生成对抗网络，采用概率模型作为生成器，采用距离模型作为鉴别器，训练鉴别器 使用强化学习的策略梯度方法来训练生成器 问题和动机 过去知识图谱嵌入领域的负采样仅仅根据概率来采样有以下两个问题 假负样本问题，有可能会有正确样本被当成负样本来采样 低质量负样本问题，会产生一些质量很低的，对训练意义不大的样本(很容易与正样本区分开的样本，对训练贡献很小) 收到对抗生成网络思想的影响，本文采用生成器来生成高质量负样本，采用鉴别器来计算嵌入 生成器使用基于概率的log-loss损失 鉴别器使用基于距离的margin-loss损失 由于存在离散的生成过程，因此不能使用基于梯度的方法进行优化，本文采用强化学习中的方差减少方法来进行优化。 相关工作 GAN最早用于生成图像 生成器接受噪声输入并输出图像 鉴别器是一种分类器，将图像分类为真和假。 训练GAN时，生成器试图生成真实图像来欺骗鉴别器，鉴别器试图将其与真是图像区分开。 GAN还能够生成满足特定要求的样本 用于自然语言处理 梯度传播不适用于离散采样的步骤，因此不能使用原始GAN来生成离散样本，如自然语言句子或三元组 SEQGAN使用强化学习来解决离散问题，使用了策略梯度和其他技巧来训练生成器。 鉴别器不一定是分类器。后来很多方法使用回归器作为鉴别器。 过去的解决方法 过去采用随机替换来生成负样本，但这样容易产生低质量的样本 对于log-softmax损失函数而言，通常会为一个正样本产生很多个负样本，因此总有高质量的负样本可以使用，因此低质量样本的影响不大 论文2(ComplEx)研究表明，当采用100：1的负/正比例会使得效果更佳">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/kbgan/" /><link rel="prev" href="https://leviathanion.github.io/cake/" /><link rel="next" href="https://leviathanion.github.io/pairre/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -346,7 +346,7 @@ L_D&amp;=\sum_{(h,r,t)\in\mathcal{T}}[f_D(h,r,t)-f_D(h^\prime,r,t^\prime)+\gamma
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

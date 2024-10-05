@@ -7,7 +7,8 @@
         <title>SCRN - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/scrn/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="SCRN">
-  <meta property="og:description" content="SCRN模型1 Novelty 通过为RNN添加一个参数缓慢变化的隐藏层来捕获长距离依赖，公式如下所示 \begin{align*} s_t &amp;= (1-\alpha)Bx_t &#43; \alpha s_{t-1} \\ h_t &amp;= \sigma(Ps_t&#43;Ax_t&#43;Rh_{t-1}) \\ y_t &amp;= f(Uh_t&#43;Vs_t) \end{align*} 约束该隐藏层中的B为对">
+  <meta property="og:description" content="SCRN模型1 Novelty 通过为RNN添加一个参数缓慢变化的隐藏层来捕获长距离依赖，公式如下所示 \begin{align*} s_t &amp;= (1-\alpha)Bx_t &#43; \alpha s_{t-1} \\ h_t &amp;= \sigma(Ps_t&#43;Ax_t&#43;Rh_{t-1}) \\ y_t &amp;= f(Uh_t&#43;Vs_t) \end{align*}
+约束该隐藏层中的B为对角矩阵，由于B为对角矩阵，且没有使用激活函数，所以该隐藏层的梯度流稳定 ">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -20,7 +21,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="SCRN">
-  <meta name="twitter:description" content="SCRN模型1 Novelty 通过为RNN添加一个参数缓慢变化的隐藏层来捕获长距离依赖，公式如下所示 \begin{align*} s_t &amp;= (1-\alpha)Bx_t &#43; \alpha s_{t-1} \\ h_t &amp;= \sigma(Ps_t&#43;Ax_t&#43;Rh_{t-1}) \\ y_t &amp;= f(Uh_t&#43;Vs_t) \end{align*} 约束该隐藏层中的B为对">
+  <meta name="twitter:description" content="SCRN模型1 Novelty 通过为RNN添加一个参数缓慢变化的隐藏层来捕获长距离依赖，公式如下所示 \begin{align*} s_t &amp;= (1-\alpha)Bx_t &#43; \alpha s_{t-1} \\ h_t &amp;= \sigma(Ps_t&#43;Ax_t&#43;Rh_{t-1}) \\ y_t &amp;= f(Uh_t&#43;Vs_t) \end{align*}
+约束该隐藏层中的B为对角矩阵，由于B为对角矩阵，且没有使用激活函数，所以该隐藏层的梯度流稳定 ">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/scrn/" /><link rel="prev" href="https://leviathanion.github.io/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/" /><link rel="next" href="https://leviathanion.github.io/qrnn/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -334,7 +336,7 @@ by error propagation. Technical report, DTIC Document, 1985.&#160;<a href="#fnre
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

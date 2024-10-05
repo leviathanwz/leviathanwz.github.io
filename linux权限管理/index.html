@@ -7,7 +7,8 @@
         <title>Linux权限管理 - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/linux%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="Linux权限管理">
-  <meta property="og:description" content="Linux权限管理 Linux系统下对于用户和文件的权限有着严格的规定，我们首先回顾Linux下的用户管理 用户管理 涉及四个文件，主要需要修改p">
+  <meta property="og:description" content="Linux权限管理 Linux系统下对于用户和文件的权限有着严格的规定，我们首先回顾Linux下的用户管理
+用户管理 涉及四个文件，主要需要修改passwd文件 文件 含义 /etc/shadow 加密的用户账户信息 /etc/passwd 用户账户信息 /etc/gshadow 隐藏的组账户信息 /etc/group 定义了用户属于哪个组 /etc/sudoers 定义了可以运行sudo的用户和用户组 用户组管理 groups username查看用户所属的组，如果省略用户名，则显示当前 id username查看用户UID和相关组的UID groupadd 选项 组名 添加一个用户组 -g指定用户组编号GID -o表示新用户组的GID可以和老用户组相同 groupdel 组名删除一个用户组 groupmod 选项 组名 除了add之外的参数，多了一个-n表示重命名 gpasswd -a username gname将用户添加到组 newgrp 组名如果一个用户同时属于多个用户组，使用此命令可切换组 用户组的存在是为了方便用户管理对他人的权限，避免对除自己之外的其他所有用户赋予相同的权限 可通过1查看默认用户组及权限">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -19,7 +20,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="Linux权限管理">
-  <meta name="twitter:description" content="Linux权限管理 Linux系统下对于用户和文件的权限有着严格的规定，我们首先回顾Linux下的用户管理 用户管理 涉及四个文件，主要需要修改p">
+  <meta name="twitter:description" content="Linux权限管理 Linux系统下对于用户和文件的权限有着严格的规定，我们首先回顾Linux下的用户管理
+用户管理 涉及四个文件，主要需要修改passwd文件 文件 含义 /etc/shadow 加密的用户账户信息 /etc/passwd 用户账户信息 /etc/gshadow 隐藏的组账户信息 /etc/group 定义了用户属于哪个组 /etc/sudoers 定义了可以运行sudo的用户和用户组 用户组管理 groups username查看用户所属的组，如果省略用户名，则显示当前 id username查看用户UID和相关组的UID groupadd 选项 组名 添加一个用户组 -g指定用户组编号GID -o表示新用户组的GID可以和老用户组相同 groupdel 组名删除一个用户组 groupmod 选项 组名 除了add之外的参数，多了一个-n表示重命名 gpasswd -a username gname将用户添加到组 newgrp 组名如果一个用户同时属于多个用户组，使用此命令可切换组 用户组的存在是为了方便用户管理对他人的权限，避免对除自己之外的其他所有用户赋予相同的权限 可通过1查看默认用户组及权限">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/linux%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/" /><link rel="prev" href="https://leviathanion.github.io/jupyter%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/" /><link rel="next" href="https://leviathanion.github.io/vim%E9%80%9F%E6%9F%A5%E8%A1%A8/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -152,34 +154,34 @@
 <ul>
 <li>涉及四个文件，主要需要修改passwd文件
 <table>
-<thead>
-<tr>
-<th style="text-align:center">文件</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">/etc/shadow</td>
-<td style="text-align:center">加密的用户账户信息</td>
-</tr>
-<tr>
-<td style="text-align:center">/etc/passwd</td>
-<td style="text-align:center">用户账户信息</td>
-</tr>
-<tr>
-<td style="text-align:center">/etc/gshadow</td>
-<td style="text-align:center">隐藏的组账户信息</td>
-</tr>
-<tr>
-<td style="text-align:center">/etc/group</td>
-<td style="text-align:center">定义了用户属于哪个组</td>
-</tr>
-<tr>
-<td style="text-align:center">/etc/sudoers</td>
-<td style="text-align:center">定义了可以运行sudo的用户和用户组</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">文件</th>
+          <th style="text-align: center">含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">/etc/shadow</td>
+          <td style="text-align: center">加密的用户账户信息</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">/etc/passwd</td>
+          <td style="text-align: center">用户账户信息</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">/etc/gshadow</td>
+          <td style="text-align: center">隐藏的组账户信息</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">/etc/group</td>
+          <td style="text-align: center">定义了用户属于哪个组</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">/etc/sudoers</td>
+          <td style="text-align: center">定义了可以运行sudo的用户和用户组</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 </ul>
@@ -212,46 +214,46 @@
 <li><code>sudo passwd -Sa</code>查看系统上的用户</li>
 <li><code>useradd</code>命令，可通过<code>man useradd</code>查看用法
 <table>
-<thead>
-<tr>
-<th style="text-align:center">参数</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">-d 目录</td>
-<td style="text-align:center">指定一个用户目录，若目录不存在，需要-m参数创建主目录</td>
-</tr>
-<tr>
-<td style="text-align:center">-g 用户组</td>
-<td style="text-align:center">指定用户所属的用户组</td>
-</tr>
-<tr>
-<td style="text-align:center">-G 用户组，用户组</td>
-<td style="text-align:center">指定用户所属的附加组</td>
-</tr>
-<tr>
-<td style="text-align:center">-s shell</td>
-<td style="text-align:center">指定用户登录的shell</td>
-</tr>
-<tr>
-<td style="text-align:center">-u 用户号</td>
-<td style="text-align:center">指定用户的用户号</td>
-</tr>
-<tr>
-<td style="text-align:center">-m</td>
-<td style="text-align:center">自动建立用户的登录目录</td>
-</tr>
-<tr>
-<td style="text-align:center">-M</td>
-<td style="text-align:center">不自动建立用户的登录目录</td>
-</tr>
-<tr>
-<td style="text-align:center">-n</td>
-<td style="text-align:center">不自动建立以用户名为名的用户组</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">参数</th>
+          <th style="text-align: center">含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">-d 目录</td>
+          <td style="text-align: center">指定一个用户目录，若目录不存在，需要-m参数创建主目录</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">-g 用户组</td>
+          <td style="text-align: center">指定用户所属的用户组</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">-G 用户组，用户组</td>
+          <td style="text-align: center">指定用户所属的附加组</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">-s shell</td>
+          <td style="text-align: center">指定用户登录的shell</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">-u 用户号</td>
+          <td style="text-align: center">指定用户的用户号</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">-m</td>
+          <td style="text-align: center">自动建立用户的登录目录</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">-M</td>
+          <td style="text-align: center">不自动建立用户的登录目录</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">-n</td>
+          <td style="text-align: center">不自动建立以用户名为名的用户组</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 </ul>
@@ -422,7 +424,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

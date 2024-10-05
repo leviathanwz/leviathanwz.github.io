@@ -7,7 +7,7 @@
         <title>Vim速查表 - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/vim%E9%80%9F%E6%9F%A5%E8%A1%A8/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="Vim速查表">
-  <meta property="og:description" content="Vim速查表 Vim键位图 光标移动 单个字符移动 1 2 3 4 5 h: 向左移动 l: 向右移动 j: 向下移动 k: 向上移动 nh: 向左移动n个字符距离 单词移动 1 2 3 4 5 6 w: 将">
+  <meta property="og:description" content="Vim速查表 Vim键位图 光标移动 单个字符移动 1 2 3 4 5 h: 向左移动 l: 向右移动 j: 向下移动 k: 向上移动 nh: 向左移动n个字符距离 单词移动 1 2 3 4 5 6 w: 将光标移动到下一个单词的开头 b: 将光标移动到前一个单词的开头 e: 将光标移动到下一个单词的词末 E: 移动到单词的结尾(忽略标点符号) ge: 将光标移动到上一个单词的词末 nw: 指定移动的次数 行内移动 1 2 3 4 5 6 7 8 9 $: 将光标移动到当前行的行尾 0: 将光标移动到当前行的行首 ^: 将光标移动到当前行的第一个非空字符（行首和当前行非空字符不是一个位置） 2|: 移到当前行的第2列 fx: 将光标移动到当前行的第一个字符x上 3fx: 将光标移动到航前行的第3个字符x上 tx: 将光标移动到目标字符x的前一个字符上 fx和tx可以通过;和,进行重复移动，一个是正向重复，一个是反向重复 文本块移动 1 2 3 4 5 6 7 (： 移到当前句子的开头 ): 移到下一个句子的开头 {: 移到当前一段的开头 }: 移到下一段的开头 [[: 移到当前这一节的开头 ]]: 移到下一节的开头 %: 用于符号间的移动，它会在一对()、[]、{}之间跳跃 在屏幕中移动 1 2 3 4 xG: 跳转到指定的第x行，G移动到文件按末尾，``（2次单引号)返回到跳转前的位置 gg: 移动到文件开头 CTRL-U: 上移半屏 CTRL-D: 下移半屏 滚屏与跳转 定位光标的位置 1 2 3 zz: 将光标置于屏幕的中间 zt: 将光标移动到屏幕的顶部 zb: 将光标移动到屏幕的底部 设置跳转标记 1 2 3 4 5 mx,my,mz设置三个位置 `x,`y,`z跳转到设置 :marks: 显示所有书签 :delm a: 删除缓冲区标签a :delm!: 删除所有缓冲区标签(小写字母), 不能删除文件标签和数字标签 块选择 块选择前可跟d,c,v,y等删除，改写，选择和复制操作">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="Vim速查表">
-  <meta name="twitter:description" content="Vim速查表 Vim键位图 光标移动 单个字符移动 1 2 3 4 5 h: 向左移动 l: 向右移动 j: 向下移动 k: 向上移动 nh: 向左移动n个字符距离 单词移动 1 2 3 4 5 6 w: 将">
+  <meta name="twitter:description" content="Vim速查表 Vim键位图 光标移动 单个字符移动 1 2 3 4 5 h: 向左移动 l: 向右移动 j: 向下移动 k: 向上移动 nh: 向左移动n个字符距离 单词移动 1 2 3 4 5 6 w: 将光标移动到下一个单词的开头 b: 将光标移动到前一个单词的开头 e: 将光标移动到下一个单词的词末 E: 移动到单词的结尾(忽略标点符号) ge: 将光标移动到上一个单词的词末 nw: 指定移动的次数 行内移动 1 2 3 4 5 6 7 8 9 $: 将光标移动到当前行的行尾 0: 将光标移动到当前行的行首 ^: 将光标移动到当前行的第一个非空字符（行首和当前行非空字符不是一个位置） 2|: 移到当前行的第2列 fx: 将光标移动到当前行的第一个字符x上 3fx: 将光标移动到航前行的第3个字符x上 tx: 将光标移动到目标字符x的前一个字符上 fx和tx可以通过;和,进行重复移动，一个是正向重复，一个是反向重复 文本块移动 1 2 3 4 5 6 7 (： 移到当前句子的开头 ): 移到下一个句子的开头 {: 移到当前一段的开头 }: 移到下一段的开头 [[: 移到当前这一节的开头 ]]: 移到下一节的开头 %: 用于符号间的移动，它会在一对()、[]、{}之间跳跃 在屏幕中移动 1 2 3 4 xG: 跳转到指定的第x行，G移动到文件按末尾，``（2次单引号)返回到跳转前的位置 gg: 移动到文件开头 CTRL-U: 上移半屏 CTRL-D: 下移半屏 滚屏与跳转 定位光标的位置 1 2 3 zz: 将光标置于屏幕的中间 zt: 将光标移动到屏幕的顶部 zb: 将光标移动到屏幕的底部 设置跳转标记 1 2 3 4 5 mx,my,mz设置三个位置 `x,`y,`z跳转到设置 :marks: 显示所有书签 :delm a: 删除缓冲区标签a :delm!: 删除所有缓冲区标签(小写字母), 不能删除文件标签和数字标签 块选择 块选择前可跟d,c,v,y等删除，改写，选择和复制操作">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/vim%E9%80%9F%E6%9F%A5%E8%A1%A8/" /><link rel="prev" href="https://leviathanion.github.io/linux%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/" /><link rel="next" href="https://leviathanion.github.io/linux%E5%AD%97%E4%BD%93%E8%B0%83%E6%95%99/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -637,7 +637,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

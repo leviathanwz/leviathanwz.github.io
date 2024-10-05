@@ -10,7 +10,25 @@
     <pubDate>Mon, 21 Aug 2023 10:35:37 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/systemd%E9%85%8D%E7%BD%AE/</guid>
-    <description><![CDATA[Systemd配置 一、由来 历史上，Linux 的启动一直采用init 进程。 下面的命令用来启动服务。 1 2 3 $ sudo /etc/init.d/apache2 start # 或者 $ service apache2 start 这种方法有两个缺]]></description>
+    <description><![CDATA[<h1 id="systemd配置">Systemd配置</h1>
+<h2 id="一由来">一、由来</h2>
+<p>历史上，Linux 的启动一直采用<a href="https://en.wikipedia.org/wiki/Init" target="_blank" rel="noopener noreffer"><code>init</code></a>
+进程。</p>
+<p>下面的命令用来启动服务。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo /etc/init.d/apache2 start
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者</span>
+</span></span><span class="line"><span class="cl">$ service apache2 start
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这种方法有两个缺点。</p>
+<p>一是启动时间长。<code>init</code>进程是串行启动，只有前一个进程启动完，才会启动下一个进程。</p>]]></description>
 </item>
 <item>
     <title>Linux电源管理</title>
@@ -18,7 +36,22 @@
     <pubDate>Wed, 16 Aug 2023 00:17:29 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86/</guid>
-    <description><![CDATA[Linux电源管理 亮度控制 硬件控制 硬件控制主要通过ACPI内核模块的接口来控制 /sys/class/backlight/提供了亮度控制的接口]]></description>
+    <description><![CDATA[<h1 id="linux电源管理">Linux电源管理</h1>
+<h2 id="亮度控制">亮度控制</h2>
+<h3 id="硬件控制">硬件控制</h3>
+<p>硬件控制主要通过ACPI内核模块的接口来控制
+<code>/sys/class/backlight/</code>提供了亮度控制的接口</p>
+<ul>
+<li><code>/sys/class/backlight/显卡名/</code>下包含多个文件
+<ul>
+<li><code>max_brightness</code>表示最大亮度</li>
+<li><code>brightness</code> 表示当前亮度,可以修改它来修改亮度</li>
+</ul>
+</li>
+</ul>
+<h3 id="软件控制">软件控制</h3>
+<h4 id="dpms">DPMS</h4>
+<p>DPMS可以在计算机不使用时启用显示器的节能行为</p>]]></description>
 </item>
 <item>
     <title>Linux触摸板配置</title>
@@ -26,7 +59,9 @@
     <pubDate>Tue, 15 Aug 2023 12:44:05 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E8%A7%A6%E6%91%B8%E6%9D%BF%E9%85%8D%E7%BD%AE/</guid>
-    <description><![CDATA[Linux触摸板配置 libinput libinput是一个函数库，在 Wayland 上用来接收设备的输入，在 X.Org 上提供输入设备的驱动。它提供对设备事件的检测和接收。对输入]]></description>
+    <description><![CDATA[<h1 id="linux触摸板配置">Linux触摸板配置</h1>
+<h2 id="libinput">libinput</h2>
+<p><code>libinput</code>是一个函数库，在 Wayland 上用来接收设备的输入，在 X.Org 上提供输入设备的驱动。它提供对设备事件的检测和接收。对输入设备信号进行处理。它提供了一些列的函数供用户使用。</p>]]></description>
 </item>
 <item>
     <title>Linux基础概念扫盲</title>
@@ -34,7 +69,36 @@
     <pubDate>Fri, 19 May 2023 15:31:36 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E6%89%AB%E7%9B%B2/</guid>
-    <description><![CDATA[Linux基础概念扫盲 XDG XDG代表&quot;Cross-Desktop Group&quot;，是来自freedesktop1的一系列规范 旨]]></description>
+    <description><![CDATA[<h1 id="linux基础概念扫盲">Linux基础概念扫盲</h1>
+<h2 id="xdg">XDG</h2>
+<ul>
+<li>XDG代表&quot;Cross-Desktop Group&quot;，是来自freedesktop<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>的一系列规范</li>
+<li>旨在标准化各类系统上的桌面和其他GUI应用程序</li>
+<li>广泛采用的一些协议：
+<ul>
+<li><code>Autostart</code>：应用程序如何在用户登录后自动启动，以及可移动媒体如何请求执行特定应用程序或在安装媒体后请求打开媒体上的特定文件。</li>
+<li><code>桌面基本目录(basedir)</code>：桌面应如何定位文件，例如配置文件或应用程序数据文件。</li>
+<li><code>桌面条目 (.desktop)</code>：描述有关应用程序信息的文件，例如名称、图标和描述。这些文件用于应用程序启动器和创建可启动的应用程序菜单。</li>
+<li><code>桌面菜单 (menu)</code>：如何从桌面条目构建菜单。</li>
+<li><code>文件管理器 D-Bus 接口</code>：与桌面文件管理器交互的常用方式。</li>
+<li><code>文件 URI</code>：如何创建和解释解释file://URI，用于拖放和其​​他桌面用途。</li>
+<li><code>免费媒体播放器规范</code>：跨播放器和媒体格式存储和读取元数据的标准方法。</li>
+<li><code>图标主题</code>：存储图标主题的常用方式。</li>
+<li><code>媒体播放器远程接口规范 (MPRIS)</code>：控制媒体播放器的 D-Bus 接口</li>
+<li><code>共享 MIME 数据库（shared-mime-info）</code>：包含常见的 MIME 类型、描述和确定文件类型的规则。</li>
+<li><code>启动通知</code>：一种允许桌面环境跟踪应用程序启动、提供用户反馈和其他功能的机制。</li>
+<li><code>Trash</code>：一种常见的方式，所有“垃圾桶”实现都应该存储、列出和取消删除已删除的文件。</li>
+<li><code>XML 书签交换语言 (XBEL)</code>：一种互联网“书签”交换格式。</li>
+</ul>
+</li>
+<li>一些常用的协议：
+<ul>
+<li><code>The MIME Applications specification</code>：决定了默认程序</li>
+</ul>
+</li>
+</ul>
+<h2 id="xdg目录规范">XDG目录规范</h2>
+<p>XDG Base Directory Specification</p>]]></description>
 </item>
 <item>
     <title>Linux射频管理</title>
@@ -42,7 +106,51 @@
     <pubDate>Sun, 14 May 2023 00:31:52 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E5%B0%84%E9%A2%91%E7%AE%A1%E7%90%86/</guid>
-    <description><![CDATA[Linux射频管理 rfkill介绍 rfkill命令可以用来打开和关闭WiFi、蓝牙等射频开关。 射频（rf）是Radio Frequency的缩]]></description>
+    <description><![CDATA[<h1 id="linux射频管理">Linux射频管理</h1>
+<h2 id="rfkill介绍"><code>rfkill</code>介绍</h2>
+<ul>
+<li><code>rfkill</code>命令可以用来打开和关闭WiFi、蓝牙等射频开关。</li>
+<li>射频（rf）是Radio Frequency的缩写，<code>rfkill</code>可以管理wifi、wlan、bluetooth、uwb、wimax、wwan、gps、fm、nfc无线信号。
+这种开关在某种程度上能够控制硬件的状态，使用的例子有：飞行模式、硬件节能。</li>
+</ul>
+<h2 id="命令">命令</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 罗列出所有的无线设备</span>
+</span></span><span class="line"><span class="cl">rfkill list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 关闭所有的射频设备</span>
+</span></span><span class="line"><span class="cl">rfkill block all
+</span></span><span class="line"><span class="cl"><span class="c1"># 打开所有的射频设备</span>
+</span></span><span class="line"><span class="cl">rfkill unblock all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 可以关掉/打开某种类型的设备，例如WiFi</span>
+</span></span><span class="line"><span class="cl">rfkill block wifi
+</span></span><span class="line"><span class="cl">rfkill unblock wifi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 也可以对于某个设备进行打开和关闭</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 下面的编号可以从`rfkill list`中查看</span>
+</span></span><span class="line"><span class="cl">rfkill block/unblock 编号
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 <item>
     <title>Fcitx5安装</title>
@@ -50,7 +158,38 @@
     <pubDate>Fri, 05 May 2023 17:13:39 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/fcitx5%E5%AE%89%E8%A3%85/</guid>
-    <description><![CDATA[Fcitx5安装 安装fcitx5 安装中文addon：fcitx5-chinese-addons 安装qt支持：fcitx5-qt 安装gtk支持]]></description>
+    <description><![CDATA[<h1 id="fcitx5安装">Fcitx5安装</h1>
+<ul>
+<li>安装fcitx5</li>
+<li>安装中文addon：fcitx5-chinese-addons</li>
+<li>安装qt支持：fcitx5-qt</li>
+<li>安装gtk支持：fcitx5-gtk</li>
+<li>安装词库：fcitx5-pinyin-zhwiki，fcitx5-pinyin-zhwiki,fcitx5-pinyin-zhwiki</li>
+<li>配置fcitx5
+<ul>
+<li>安装fcitx5-configtool</li>
+<li>打开fcitx5-configtool，在input method中添加pinyin</li>
+</ul>
+</li>
+<li>编辑<code>/etc/environment</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GTK_IM_MODULE=fcitx
+</span></span><span class="line"><span class="cl">QT_IM_MODULE=fcitx
+</span></span><span class="line"><span class="cl">XMODIFIERS=@im=fcitx
+</span></span><span class="line"><span class="cl">SDL_IM_MODULE=fcitx
+</span></span><span class="line"><span class="cl">GLFW_IM_MODULE=ibus
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 <item>
     <title>Linux网络配置和管理</title>
@@ -58,7 +197,101 @@
     <pubDate>Thu, 06 Apr 2023 09:37:46 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%92%8C%E7%AE%A1%E7%90%86/</guid>
-    <description><![CDATA[网络管理 可查询此链接linux网络命令 查看linux网络命令的使用 网络检查步骤 ip link show查看网卡情况 ip addr show查看ip情况 network]]></description>
+    <description><![CDATA[<h1 id="网络管理">网络管理</h1>
+<blockquote>
+<p>可查询此链接<a href="http://linux-ip.net/html/index.html" target="_blank" rel="noopener noreffer">linux网络命令</a>
+查看linux网络命令的使用</p>
+</blockquote>
+<h2 id="网络检查步骤">网络检查步骤</h2>
+<ol>
+<li><code>ip link show</code>查看网卡情况</li>
+<li><code>ip addr show</code>查看ip情况</li>
+<li><code>networkctl</code>查看网络接管情况</li>
+<li><code>resolvectl</code>查看dns情况</li>
+<li><code>ping baidu.com</code>查看网络最终情况</li>
+</ol>
+<h2 id="systemd-resolved配置"><code>systemd-resolved</code>配置</h2>
+<ul>
+<li>自动管理dns配置: <code>ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf</code>
+<ul>
+<li>配置文件中包含了上级dns服务器及搜索域名</li>
+</ul>
+</li>
+<li>手动dns文件配置在两个地方<code>/etc/systemd/resolved.conf</code>或者<code>/etc/systemd/resolved.conf.d/*</code>
+<ul>
+<li>在<code>/etc/systemd/resolved.conf.d/dns_servers.conf</code>中配置</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Resolve]
+</span></span><span class="line"><span class="cl">DNS=114.114.114.114
+</span></span><span class="line"><span class="cl">Domains=~.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>在<code>/etc/systemd/resolved.conf.d/fallback_dns.conf</code>中配置</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Resolve]
+</span></span><span class="line"><span class="cl">FallbackDNS=8.8.8.8
+</span></span></code></pre></td></tr></table>
+</div>
+</div>如果要禁用fallback_dns 功能,则不设置FallbackDNS参数</li>
+<li>上述配置等效于<code>在/etc/systemd/resolved.conf</code>将二者一起配置</li>
+</ul>
+<h2 id="systemd-networkd配置"><code>systemd-networkd</code>配置</h2>
+<ul>
+<li>需要在<code>/etc/systemd/network/自定义.network</code>中自己配置</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Match]
+</span></span><span class="line"><span class="cl">Name=enp1s0 # 也支持 en* 的正则表达式
+</span></span><span class="line"><span class="cl">[Network]
+</span></span><span class="line"><span class="cl">DHCP=yes/ipv4/ipv6
+</span></span><span class="line"><span class="cl">DHCPServer=
+</span></span><span class="line"><span class="cl">DNS=
+</span></span><span class="line"><span class="cl">Address=
+</span></span><span class="line"><span class="cl">Gateway=
+</span></span><span class="line"><span class="cl">Domains=
+</span></span><span class="line"><span class="cl"><sup>DHCP</sup>/<sub>DHCPv4</sub>/[DHCPv6]
+</span></span><span class="line"><span class="cl">RouteMetric=
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="iwd无线网配置"><code>iwd</code>无线网配置</h2>
+<ul>
+<li><code>iwctl</code>命令进入wifi连接界面</li>
+<li><code>station wlan0 get-network</code>查看目前wifi情况</li>
+<li><code>station wlan0 scan</code>扫描wifi</li>
+<li><code>station wlan0 connect wifi名</code>连接wifi</li>
+</ul>
+<h2 id="多网卡路由配置">多网卡路由配置</h2>
+<ul>
+<li>
+<p>使用策略路由，使用多个路由表来配置不同的网域路由</p>]]></description>
 </item>
 <item>
     <title>Linux发行版和软件包管理</title>
@@ -66,7 +299,9 @@
     <pubDate>Sun, 19 Feb 2023 22:24:10 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E5%8F%91%E8%A1%8C%E7%89%88%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
-    <description><![CDATA[Linux发行版和软件包管理 Linux发行版和常规包管理 Linux发行版虽然很多，但是可以根据软件安装包的格式进行大体上的分类，这样类似的系]]></description>
+    <description><![CDATA[<h1 id="linux发行版和软件包管理">Linux发行版和软件包管理</h1>
+<h2 id="linux发行版和常规包管理">Linux发行版和常规包管理</h2>
+<p>Linux发行版虽然很多，但是可以根据软件安装包的格式进行大体上的分类，这样类似的系统使用方法都没有太大差异的。根据软件安装包的格式可以将Linux发行版分为以下四类，根据包管理器的不同又可以进一步细分(括号前为包管理器前端工具名称，括号里为常用指令):</p>]]></description>
 </item>
 <item>
     <title>Linux桌面环境和窗口管理器</title>
@@ -74,7 +309,10 @@
     <pubDate>Sat, 18 Feb 2023 19:37:55 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%E5%92%8C%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86%E5%99%A8/</guid>
-    <description><![CDATA[Linux桌面环境和窗口管理器 Desktop Environment(DE)1 一般情况下DE包含WM，比如Gnome3的默认WM是Mutter，KDE5的默认WM是KWin。主流的桌面]]></description>
+    <description><![CDATA[<h1 id="linux桌面环境和窗口管理器">Linux桌面环境和窗口管理器</h1>
+<h2 id="desktop-environmentde1">Desktop Environment(DE)<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h2>
+<blockquote>
+<p>一般情况下DE包含WM，比如Gnome3的默认WM是Mutter，KDE5的默认WM是KWin。主流的桌面环境都提供了大量自带的桌面组件来构成其完整的桌面体验。</p>]]></description>
 </item>
 <item>
     <title>DKMS</title>
@@ -82,7 +320,20 @@
     <pubDate>Fri, 17 Feb 2023 17:00:12 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/dkms/</guid>
-    <description><![CDATA[DKMS DKMS动态内核模块支持（DKMS）是用来生成 Linux 的内核模块的一个框架 虽然可以通过Readme文件或者INSTALL文件来编译新的驱动或者某]]></description>
+    <description><![CDATA[<h1 id="dkms">DKMS</h1>
+<ul>
+<li>DKMS动态内核模块支持（DKMS）是用来生成 Linux 的内核模块的一个框架
+<ul>
+<li>虽然可以通过Readme文件或者INSTALL文件来编译新的驱动或者某些模块，但当内核版本变动时，需要重新编译这些模块，较为复杂</li>
+<li>因此DKMS一般适用于还未集成到内核中的模块，或者魔改版Linux内核</li>
+<li>同时当新的内核安装时，DKMS 支持的内核模块会自动重建。</li>
+</ul>
+</li>
+<li>前置条件
+<ul>
+<li>安装DKMS</li>
+<li>安装Linux内核的头文件(标准Linux版本头文件为linux-headers。非标准版需要自己寻找)
+<figure><a class="lightgallery" href="/DKMS/DKMS%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.jpg" title="DKMS工作流程" data-thumbnail="/DKMS/DKMS%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.jpg" data-sub-html="<h2>DKMS工作流程</h2><p>DKMS工作流程</p>]]></description>
 </item>
 </channel>
 </rss>

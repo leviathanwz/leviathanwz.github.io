@@ -10,7 +10,11 @@
     <pubDate>Mon, 03 Apr 2023 13:42:04 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6-android%E7%AF%87/</guid>
-    <description><![CDATA[常用软件-Android篇 NFC工具 Mifare Classic Tool(读取标签)]]></description>
+    <description><![CDATA[<h1 id="常用软件-android篇">常用软件-Android篇</h1>
+<h2 id="nfc工具">NFC工具</h2>
+<ul>
+<li>Mifare Classic Tool(读取标签)</li>
+</ul>]]></description>
 </item>
 <item>
     <title>常用软件-Linux篇</title>
@@ -18,7 +22,47 @@
     <pubDate>Mon, 03 Apr 2023 13:41:50 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6-linux%E7%AF%87/</guid>
-    <description><![CDATA[常用软件-Linux篇 办公 wps全家桶 对于arch而言，有两个源cn和国际版，国际版没有云同步功能，资源占用更低 音视频 vlc mpv(视频播放器)]]></description>
+    <description><![CDATA[<h1 id="常用软件-linux篇">常用软件-Linux篇</h1>
+<h2 id="办公">办公</h2>
+<ul>
+<li>wps全家桶</li>
+</ul>
+<blockquote>
+<p>对于arch而言，有两个源cn和国际版，国际版没有云同步功能，资源占用更低</p>
+</blockquote>
+<h2 id="音视频">音视频</h2>
+<ul>
+<li>vlc mpv(视频播放器)</li>
+<li>ffmpeg(视频处理开源项目)</li>
+<li>deadbeef/spotify/(mpd + mpc/ncmpcpp) (音乐播放器/在线音乐/音乐播放器守护程序+接口/命令行GUI)</li>
+<li>osd-lyrics(歌词查找和展示器)</li>
+<li>kid3(歌曲tag编辑器)</li>
+</ul>
+<h2 id="文件类">文件类</h2>
+<ul>
+<li>fzf(开源文件搜索工具)</li>
+<li>ripgrep(开源面向行的搜索器)</li>
+<li>pandoc(文件类型转换)</li>
+<li>thunar/dolphin(文件夹工具)</li>
+<li>ranger/yazi(命令行文件夹查看器)</li>
+</ul>
+<h2 id="下载">下载</h2>
+<ul>
+<li>Motrix(多线程下载工具)</li>
+<li>qBittorent(种子下载工具)</li>
+<li>aria2(命令行下载工具)</li>
+</ul>
+<h2 id="pdf">PDF</h2>
+<ul>
+<li>okular/zathura(pdf阅读软件)</li>
+</ul>
+<h2 id="绘图软件">绘图软件</h2>
+<ul>
+<li>drawio</li>
+</ul>
+<h2 id="系统驱动">系统驱动</h2>
+<blockquote>
+<p>网络和蓝牙类驱动需要通过systemctl进行设置</p>]]></description>
 </item>
 <item>
     <title>常用软件-Windows篇</title>
@@ -26,7 +70,67 @@
     <pubDate>Wed, 12 Oct 2022 16:15:21 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6-windows%E7%AF%87/</guid>
-    <description><![CDATA[常用软件总结(Windows篇) 社交 QQ wechat dingding 飞书 telegram 办公 office全家桶 office tool plus(office下载与激活) 小恐龙公文排版助手 iSlide(]]></description>
+    <description><![CDATA[<h1 id="常用软件总结windows篇">常用软件总结(Windows篇)</h1>
+<h2 id="社交">社交</h2>
+<ul>
+<li>QQ</li>
+<li>wechat</li>
+<li>dingding</li>
+<li>飞书</li>
+<li>telegram</li>
+</ul>
+<h2 id="办公">办公</h2>
+<ul>
+<li>office全家桶</li>
+<li>office tool plus(office下载与激活)</li>
+<li>小恐龙公文排版助手</li>
+<li>iSlide(PPT插件)</li>
+<li>坚果云</li>
+<li>百度云</li>
+<li>有道云笔记</li>
+</ul>
+<h2 id="音视频">音视频</h2>
+<ul>
+<li>PotPlayer</li>
+<li>完美解码</li>
+<li>ffmpeg(视频处理开源项目)</li>
+<li>foobar2000(播放器)</li>
+<li>mp3tag/musictag(歌曲tag编辑器)</li>
+</ul>
+<h2 id="文件类">文件类</h2>
+<ul>
+<li>Everything(文件搜索)</li>
+<li>WizTree64(磁盘文件占用)</li>
+<li>SpaceSniffer(磁盘文件占用)</li>
+<li>GoodSync(文件同步软件)</li>
+<li>pandoc(文件类型转换)</li>
+</ul>
+<h2 id="下载">下载</h2>
+<ul>
+<li>IDM(多线程下载工具)</li>
+<li>qBittorent(种子下载工具)</li>
+</ul>
+<h2 id="pdf">PDF</h2>
+<ul>
+<li>SumatraPDF(轻量级pdf阅读软件)</li>
+<li>Adobe Acrobat DC(专业pdf工具)</li>
+</ul>
+<h2 id="绘图软件">绘图软件</h2>
+<ul>
+<li>PPT</li>
+<li>Visio</li>
+<li>AxGlyph(实用科研矢量绘图工具)</li>
+</ul>
+<h2 id="英文写作">英文写作</h2>
+<ul>
+<li>Academic Phrasebank(论文写作语法指南)</li>
+<li>DeepL(翻译)</li>
+<li>grammarly/ginger(语法错误)</li>
+<li>Quillbot(同义词段落替换,更为地道)</li>
+<li>Thesaurus(高级词汇)</li>
+</ul>
+<blockquote>
+<p>deepl+grammarly/ginger+Quillbot+改写/参考Academic Phrasebank</p>]]></description>
 </item>
 </channel>
 </rss>

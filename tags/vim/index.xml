@@ -10,7 +10,35 @@
     <pubDate>Thu, 06 Apr 2023 09:39:52 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/neovim%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[nvim配置教程 linux 从github拉取配置文件并放在.config目录下，命名为nvim 1 git clone https://github.com/leviathanion/nvim-config.git ~/.config/nvim 可通过:checkhealth查看各插件情况]]></description>
+    <description><![CDATA[<h1 id="nvim配置教程">nvim配置教程</h1>
+<h2 id="linux">linux</h2>
+<ul>
+<li>从github拉取配置文件并放在.config目录下，命名为nvim</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git clone https://github.com/leviathanion/nvim-config.git  ~/.config/nvim
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>可通过<code>:checkhealth</code>查看各插件情况</li>
+<li>在.bashrc或者.zshrc中添加以下代码，使得root权限也可用</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">sudonvim</span> <span class="o">=</span> <span class="s2">&#34;sudo -E nvim&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="windows">windows</h2>
+<ul>
+<li>与linux类似，将配置文件放到<code>c:user/appdata/local/nvim</code>中</li>
+</ul>]]></description>
 </item>
 <item>
     <title>Vim速查表</title>
@@ -18,7 +46,143 @@
     <pubDate>Wed, 15 Feb 2023 15:16:42 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/vim%E9%80%9F%E6%9F%A5%E8%A1%A8/</guid>
-    <description><![CDATA[Vim速查表 Vim键位图 光标移动 单个字符移动 1 2 3 4 5 h: 向左移动 l: 向右移动 j: 向下移动 k: 向上移动 nh: 向左移动n个字符距离 单词移动 1 2 3 4 5 6 w: 将]]></description>
+    <description><![CDATA[<h1 id="vim速查表">Vim速查表</h1>
+<p><figure><a class="lightgallery" href="/Vim%E9%80%9F%E6%9F%A5%E8%A1%A8/Vim%E9%94%AE%E4%BD%8D%E5%9B%BE.gif" title="Vim键位图" data-thumbnail="/Vim%E9%80%9F%E6%9F%A5%E8%A1%A8/Vim%E9%94%AE%E4%BD%8D%E5%9B%BE.gif" data-sub-html="<h2>Vim键位图</h2><p>Vim键位图</p>">
+        
+    </a><figcaption class="image-caption">Vim键位图</figcaption>
+    </figure></p>
+<h2 id="光标移动">光标移动</h2>
+<h3 id="单个字符移动">单个字符移动</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">h</span><span class="p">:</span>  <span class="err">向左移动</span>
+</span></span><span class="line"><span class="cl"><span class="nl">l</span><span class="p">:</span>  <span class="err">向右移动</span>
+</span></span><span class="line"><span class="cl"><span class="nl">j</span><span class="p">:</span>  <span class="err">向下移动</span>
+</span></span><span class="line"><span class="cl"><span class="nl">k</span><span class="p">:</span>  <span class="err">向上移动</span>
+</span></span><span class="line"><span class="cl"><span class="nl">nh</span><span class="p">:</span>  <span class="err">向左移动</span><span class="n">n个字符距离</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="单词移动">单词移动</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">w</span><span class="p">:</span>  <span class="err">将光标移动到下一个单词的开头</span>
+</span></span><span class="line"><span class="cl"><span class="nl">b</span><span class="p">:</span>  <span class="err">将光标移动到前一个单词的开头</span>
+</span></span><span class="line"><span class="cl"><span class="nl">e</span><span class="p">:</span>  <span class="err">将光标移动到下一个单词的词末</span>
+</span></span><span class="line"><span class="cl"><span class="nl">E</span><span class="p">:</span>  <span class="err">移动到单词的结尾</span><span class="p">(</span><span class="err">忽略标点符号</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nl">ge</span><span class="p">:</span>  <span class="err">将光标移动到上一个单词的词末</span>
+</span></span><span class="line"><span class="cl"><span class="nl">nw</span><span class="p">:</span>  <span class="err">指定移动的次数</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="行内移动">行内移动</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span><span class="o">:</span>  <span class="err">将光标移动到当前行的行尾</span>
+</span></span><span class="line"><span class="cl"><span class="mi">0</span><span class="o">:</span>  <span class="err">将光标移动到当前行的行首</span>
+</span></span><span class="line"><span class="cl"><span class="o">^:</span>  <span class="err">将光标移动到当前行的第一个非空字符（行首和当前行非空字符不是一个位置）</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span><span class="o">|:</span>  <span class="err">移到当前行的第</span><span class="mi">2</span><span class="err">列</span>
+</span></span><span class="line"><span class="cl"><span class="nl">fx</span><span class="p">:</span>  <span class="err">将光标移动到当前行的第一个字符</span><span class="n">x上</span>
+</span></span><span class="line"><span class="cl"><span class="mf">3f</span><span class="nl">x</span><span class="p">:</span> <span class="err">将光标移动到航前行的第</span><span class="mi">3</span><span class="err">个字符</span><span class="n">x上</span>
+</span></span><span class="line"><span class="cl"><span class="nl">tx</span><span class="p">:</span>   <span class="err">将光标移动到目标字符</span><span class="n">x的前一个字符上</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fx和tx可以通过</span><span class="p">;</span><span class="err">和</span><span class="p">,</span><span class="err">进行重复移动，一个是正向重复，一个是反向重复</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="文本块移动">文本块移动</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="p">(</span><span class="err">：</span>  <span class="err">移到当前句子的开头</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">:</span>  <span class="err">移到下一个句子的开头</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="o">:</span>  <span class="err">移到当前一段的开头</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">:</span>  <span class="err">移到下一段的开头</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="o">:</span>  <span class="err">移到当前这一节的开头</span>
+</span></span><span class="line"><span class="cl"><span class="p">]]</span><span class="o">:</span>  <span class="err">移到下一节的开头</span>
+</span></span><span class="line"><span class="cl"><span class="o">%:</span>  <span class="err">用于符号间的移动，它会在一对</span><span class="p">()</span><span class="err">、</span><span class="p">[]</span><span class="err">、</span><span class="p">{}</span><span class="err">之间跳跃</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="在屏幕中移动">在屏幕中移动</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">xG</span><span class="p">:</span>  <span class="err">跳转到指定的第</span><span class="n">x行</span><span class="err">，</span><span class="n">G移动到文件按末尾</span><span class="err">，``（</span><span class="mi">2</span><span class="err">次单引号</span><span class="p">)</span><span class="err">返回到跳转前的位置</span>
+</span></span><span class="line"><span class="cl"><span class="nl">gg</span><span class="p">:</span>  <span class="err">移动到文件开头</span>
+</span></span><span class="line"><span class="cl"><span class="n">CTRL</span><span class="o">-</span><span class="nl">U</span><span class="p">:</span>  <span class="err">上移半屏</span>
+</span></span><span class="line"><span class="cl"><span class="n">CTRL</span><span class="o">-</span><span class="nl">D</span><span class="p">:</span>  <span class="err">下移半屏</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="滚屏与跳转">滚屏与跳转</h2>
+<h3 id="定位光标的位置">定位光标的位置</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">zz</span><span class="p">:</span>  <span class="err">将光标置于屏幕的中间</span>
+</span></span><span class="line"><span class="cl"><span class="nl">zt</span><span class="p">:</span>  <span class="err">将光标移动到屏幕的顶部</span>
+</span></span><span class="line"><span class="cl"><span class="nl">zb</span><span class="p">:</span>  <span class="err">将光标移动到屏幕的底部</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="设置跳转标记">设置跳转标记</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">mx</span><span class="p">,</span><span class="n">my</span><span class="p">,</span><span class="n">mz设置三个位置</span>
+</span></span><span class="line"><span class="cl"><span class="err">`</span><span class="n">x</span><span class="p">,</span><span class="err">`</span><span class="n">y</span><span class="p">,</span><span class="err">`</span><span class="nl">z跳转到设置</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">marks</span><span class="p">:</span>  <span class="err">显示所有书签</span>
+</span></span><span class="line"><span class="cl"><span class="o">:</span><span class="n">delm</span> <span class="nl">a</span><span class="p">:</span>  <span class="err">删除缓冲区标签</span><span class="nl">a</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="n">delm</span><span class="o">!:</span>  <span class="err">删除所有缓冲区标签</span><span class="p">(</span><span class="err">小写字母</span><span class="p">),</span> <span class="err">不能删除文件标签和数字标签</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="块选择">块选择</h2>
+<blockquote>
+<p>块选择前可跟d,c,v,y等删除，改写，选择和复制操作</p>]]></description>
 </item>
 </channel>
 </rss>

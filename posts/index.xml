@@ -10,7 +10,68 @@
     <pubDate>Thu, 14 Sep 2023 17:16:03 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/</guid>
-    <description><![CDATA[计算机书籍推荐 sicp 架构设计 Designing Data-Intensive Applications Clean Architecture: A Craftsman&rsquo;s Guide to Software Structure and Design 领域驱动设计 企业应用架构模式 凤凰架构 设计模式 MIT6.824 手边书 on java java并发编程之美 实战java高]]></description>
+    <description><![CDATA[<h1 id="计算机书籍推荐">计算机书籍推荐</h1>
+<ul>
+<li>sicp</li>
+</ul>
+<h2 id="架构设计">架构设计</h2>
+<ul>
+<li>Designing Data-Intensive Applications</li>
+<li>Clean Architecture: A Craftsman&rsquo;s Guide to Software Structure and Design</li>
+<li>领域驱动设计</li>
+<li>企业应用架构模式</li>
+<li>凤凰架构</li>
+<li>设计模式</li>
+<li>MIT6.824</li>
+</ul>
+<h2 id="手边书">手边书</h2>
+<ul>
+<li>on java</li>
+<li>java并发编程之美</li>
+<li>实战java高并发程序设计</li>
+<li>深入理解java虚拟机</li>
+<li>netty实战</li>
+<li>高性能mysql(补充高可用mysql)</li>
+<li>redis实战，redis设计与实现</li>
+<li>计算机的构造与解释</li>
+</ul>
+<h2 id="编码规范">编码规范</h2>
+<ul>
+<li>代码大全</li>
+<li>代码整洁之道</li>
+<li>重构:改善既有代码质量</li>
+</ul>
+<h2 id="性能优化">性能优化</h2>
+<ul>
+<li>性能之巅</li>
+</ul>
+<h2 id="计算机基础">计算机基础</h2>
+<h3 id="通识">通识</h3>
+<ul>
+<li>深入理解计算机系统</li>
+</ul>
+<h3 id="算法和编程思想">算法和编程思想</h3>
+<ul>
+<li>编程珠玑</li>
+<li>编码：隐匿在计算机软硬件背后的语言</li>
+<li>算法导论</li>
+<li>计算机程序设计艺术</li>
+<li>啊哈算法</li>
+</ul>
+<h3 id="操作系统">操作系统</h3>
+<ul>
+<li>现代操作系统</li>
+</ul>
+<h3 id="数据库">数据库</h3>
+<ul>
+<li>CMU15445</li>
+<li>MySQL必知必会</li>
+<li>MySQL技术内幕</li>
+</ul>
+<h3 id="计算机网络">计算机网络</h3>
+<ul>
+<li>计算机网络-自顶向下方法</li>
+</ul>]]></description>
 </item>
 <item>
     <title>Systemd配置</title>
@@ -18,7 +79,25 @@
     <pubDate>Mon, 21 Aug 2023 10:35:37 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/systemd%E9%85%8D%E7%BD%AE/</guid>
-    <description><![CDATA[Systemd配置 一、由来 历史上，Linux 的启动一直采用init 进程。 下面的命令用来启动服务。 1 2 3 $ sudo /etc/init.d/apache2 start # 或者 $ service apache2 start 这种方法有两个缺]]></description>
+    <description><![CDATA[<h1 id="systemd配置">Systemd配置</h1>
+<h2 id="一由来">一、由来</h2>
+<p>历史上，Linux 的启动一直采用<a href="https://en.wikipedia.org/wiki/Init" target="_blank" rel="noopener noreffer"><code>init</code></a>
+进程。</p>
+<p>下面的命令用来启动服务。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo /etc/init.d/apache2 start
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者</span>
+</span></span><span class="line"><span class="cl">$ service apache2 start
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这种方法有两个缺点。</p>
+<p>一是启动时间长。<code>init</code>进程是串行启动，只有前一个进程启动完，才会启动下一个进程。</p>]]></description>
 </item>
 <item>
     <title>Linux电源管理</title>
@@ -26,7 +105,22 @@
     <pubDate>Wed, 16 Aug 2023 00:17:29 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86/</guid>
-    <description><![CDATA[Linux电源管理 亮度控制 硬件控制 硬件控制主要通过ACPI内核模块的接口来控制 /sys/class/backlight/提供了亮度控制的接口]]></description>
+    <description><![CDATA[<h1 id="linux电源管理">Linux电源管理</h1>
+<h2 id="亮度控制">亮度控制</h2>
+<h3 id="硬件控制">硬件控制</h3>
+<p>硬件控制主要通过ACPI内核模块的接口来控制
+<code>/sys/class/backlight/</code>提供了亮度控制的接口</p>
+<ul>
+<li><code>/sys/class/backlight/显卡名/</code>下包含多个文件
+<ul>
+<li><code>max_brightness</code>表示最大亮度</li>
+<li><code>brightness</code> 表示当前亮度,可以修改它来修改亮度</li>
+</ul>
+</li>
+</ul>
+<h3 id="软件控制">软件控制</h3>
+<h4 id="dpms">DPMS</h4>
+<p>DPMS可以在计算机不使用时启用显示器的节能行为</p>]]></description>
 </item>
 <item>
     <title>Linux触摸板配置</title>
@@ -34,7 +128,9 @@
     <pubDate>Tue, 15 Aug 2023 12:44:05 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E8%A7%A6%E6%91%B8%E6%9D%BF%E9%85%8D%E7%BD%AE/</guid>
-    <description><![CDATA[Linux触摸板配置 libinput libinput是一个函数库，在 Wayland 上用来接收设备的输入，在 X.Org 上提供输入设备的驱动。它提供对设备事件的检测和接收。对输入]]></description>
+    <description><![CDATA[<h1 id="linux触摸板配置">Linux触摸板配置</h1>
+<h2 id="libinput">libinput</h2>
+<p><code>libinput</code>是一个函数库，在 Wayland 上用来接收设备的输入，在 X.Org 上提供输入设备的驱动。它提供对设备事件的检测和接收。对输入设备信号进行处理。它提供了一些列的函数供用户使用。</p>]]></description>
 </item>
 <item>
     <title>中台高扩展实践</title>
@@ -42,7 +138,726 @@
     <pubDate>Sun, 11 Jun 2023 15:06:06 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/%E4%B8%AD%E5%8F%B0%E9%AB%98%E6%89%A9%E5%B1%95%E5%AE%9E%E8%B7%B5/</guid>
-    <description><![CDATA[中台高扩展实战 扩展点 基于Spring Bean的扩展点 使用流程： 编写扩展点类 该类实现扩展点接口 该类添加扩展点注解（可能包括了扩展点定位信息）来]]></description>
+    <description><![CDATA[<h1 id="中台高扩展实战">中台高扩展实战</h1>
+<h2 id="扩展点">扩展点</h2>
+<h3 id="基于spring-bean的扩展点">基于Spring Bean的扩展点</h3>
+<blockquote>
+<p>使用流程：</p>
+<ol>
+<li>
+<p>编写扩展点类</p>
+<ul>
+<li>
+<p>该类实现扩展点接口</p>
+</li>
+<li>
+<p>该类添加扩展点注解（可能包括了扩展点定位信息）来标识扩展点</p>
+</li>
+</ul>
+</li>
+<li>
+<p>执行扩展点类</p>
+</li>
+</ol>
+</blockquote>
+<ul>
+<li>定义扩展点坐标类：用于定位扩展点的位置
+<ul>
+<li>包含扩展点名和ID</li>
+<li>扩展点名是接口，用于分别不同的扩展点业务</li>
+<li>扩展点ID是其对应的业务区分点，用于分别此处使用的该扩展点业务的方法</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Extension Coordinate(扩展坐标) is used to uniquely position an Extension
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExtensionCoordinate</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">extensionPointName</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">bizScenarioUniqueIdentity</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * Wrapper
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">extensionPointClass</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">BizScenario</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Class</span><span class="w"> </span><span class="nf">getExtensionPointClass</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">extensionPointClass</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">BizScenario</span><span class="w"> </span><span class="nf">getBizScenario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">ExtensionCoordinate</span><span class="w"> </span><span class="nf">valueOf</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">extPtClass</span><span class="p">,</span><span class="w"> </span><span class="n">BizScenario</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ExtensionCoordinate</span><span class="p">(</span><span class="n">extPtClass</span><span class="p">,</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ExtensionCoordinate</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">extPtClass</span><span class="p">,</span><span class="w"> </span><span class="n">BizScenario</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">extensionPointClass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extPtClass</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">extensionPointName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extPtClass</span><span class="p">.</span><span class="na">getName</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">bizScenario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">bizScenarioUniqueIdentity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">.</span><span class="na">getUniqueIdentity</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ExtensionCoordinate</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">extensionPoint</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">extensionPointName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extensionPoint</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">bizScenarioUniqueIdentity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hashCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">prime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">31</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prime</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="n">bizScenarioUniqueIdentity</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">bizScenarioUniqueIdentity</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prime</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="n">extensionPointName</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">extensionPointName</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">getClass</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">getClass</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">ExtensionCoordinate</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ExtensionCoordinate</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bizScenarioUniqueIdentity</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">bizScenarioUniqueIdentity</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">bizScenarioUniqueIdentity</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">bizScenarioUniqueIdentity</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">extensionPointName</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">extensionPointName</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="n">extensionPointName</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">extensionPointName</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&#34;ExtensionCoordinate [extensionPointName=&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">extensionPointName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;, bizScenarioUniqueIdentity=&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bizScenarioUniqueIdentity</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;]&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>定义扩展点注解，用于后续自动注册扩展点类，同时也要包含一些参数用于区分不同的扩展点和生成扩展点坐标</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.annotation.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Extension
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Inherited</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Retention</span><span class="p">(</span><span class="n">RetentionPolicy</span><span class="p">.</span><span class="na">RUNTIME</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Target</span><span class="p">({</span><span class="n">ElementType</span><span class="p">.</span><span class="na">TYPE</span><span class="p">})</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Component</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="nd">@interface</span><span class="w"> </span><span class="n">Extension</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">bizId</span><span class="p">()</span><span class="w">  </span><span class="k">default</span><span class="w"> </span><span class="n">BizScenario</span><span class="p">.</span><span class="na">DEFAULT_BIZ_ID</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">useCase</span><span class="p">()</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">BizScenario</span><span class="p">.</span><span class="na">DEFAULT_USE_CASE</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">scenario</span><span class="p">()</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">BizScenario</span><span class="p">.</span><span class="na">DEFAULT_SCENARIO</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.annotation.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * because {@link Extension} only supports single coordinates,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * this annotation is a supplement to {@link Extension} and supports multiple coordinates
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @version 1.0
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @see Extension
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Inherited</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Retention</span><span class="p">(</span><span class="n">RetentionPolicy</span><span class="p">.</span><span class="na">RUNTIME</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Target</span><span class="p">({</span><span class="n">ElementType</span><span class="p">.</span><span class="na">TYPE</span><span class="p">})</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Component</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="nd">@interface</span><span class="w"> </span><span class="n">Extensions</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="nf">bizId</span><span class="p">()</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">BizScenario</span><span class="p">.</span><span class="na">DEFAULT_BIZ_ID</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="nf">useCase</span><span class="p">()</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">BizScenario</span><span class="p">.</span><span class="na">DEFAULT_USE_CASE</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="nf">scenario</span><span class="p">()</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">BizScenario</span><span class="p">.</span><span class="na">DEFAULT_SCENARIO</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>定义扩展点仓库类，使用Map，Key代表扩展点坐标，Value代表扩展点类</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * ExtensionRepository 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Component</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExtensionRepository</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">ExtensionCoordinate</span><span class="p">,</span><span class="w"> </span><span class="n">ExtensionPointI</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getExtensionRepo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">extensionRepo</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">ExtensionCoordinate</span><span class="p">,</span><span class="w"> </span><span class="n">ExtensionPointI</span><span class="o">&gt;</span><span class="w"> </span><span class="n">extensionRepo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>定义扩展点接口</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *  ExtensionPointI is the parent interface of all ExtensionPoints
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *  扩展点表示一块逻辑在不同的业务有不同的实现，使用扩展点做接口申明，然后用Extension（扩展）去实现扩展点。 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ExtensionPointI</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>扩展点类自动注册：
+<ul>
+<li>利用Spring应用上下文来获取所有带有特殊注解的Bean对象，也就是扩展点类</li>
+<li>定义扩展点注册类
+<ol>
+<li>通过反射来获取Bean对象对应的扩展点类</li>
+<li>利用反射来获取该类对应的接口和以及注解中的值，生成扩展点坐标类</li>
+<li>将扩展点坐标和扩展点类放入扩展点仓库</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension.register</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension.Extension</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension.ExtensionPointI</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension.Extensions</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">jakarta.annotation.PostConstruct</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">jakarta.annotation.Resource</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">lombok.extern.slf4j.Slf4j</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.BeansException</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.ApplicationContext</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.ApplicationContextAware</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * ExtensionBootstrap
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @author Frank Zhang
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @date 2020-06-18 7:55 PM
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Slf4j</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Component</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExtensionBootstrap</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ApplicationContextAware</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Resource</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ExtensionRegister</span><span class="w"> </span><span class="n">extensionRegister</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ApplicationContext</span><span class="w"> </span><span class="n">applicationContext</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@PostConstruct</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">ExtensionPointI</span><span class="o">&gt;</span><span class="w"> </span><span class="n">extMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">applicationContext</span><span class="p">.</span><span class="na">getBeansOfType</span><span class="p">(</span><span class="n">ExtensionPointI</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ExtensionPointI</span><span class="w"> </span><span class="n">ext</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">extMap</span><span class="p">.</span><span class="na">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ext</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">isAnnotationPresent</span><span class="p">(</span><span class="n">Extension</span><span class="p">.</span><span class="na">class</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">extensionRegister</span><span class="p">.</span><span class="na">doRegistration</span><span class="p">(</span><span class="n">ext</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ext</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">isAnnotationPresent</span><span class="p">(</span><span class="n">Extensions</span><span class="p">.</span><span class="na">class</span><span class="p">)){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">extensionRegister</span><span class="p">.</span><span class="na">doRegistrationExtensions</span><span class="p">(</span><span class="n">ext</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&#34;There is no annotation for @Extension or @Extension on this extension class:{}&#34;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="p">.</span><span class="na">getClass</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setApplicationContext</span><span class="p">(</span><span class="n">ApplicationContext</span><span class="w"> </span><span class="n">applicationContext</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">BeansException</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">applicationContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">applicationContext</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension.register</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.alibaba.cola.extension.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">jakarta.annotation.Resource</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.aop.support.AopUtils</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.core.annotation.AnnotatedElementUtils</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.core.annotation.AnnotationUtils</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.util.ClassUtils</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.util.ObjectUtils</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * ExtensionRegister
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Component</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExtensionRegister</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 扩展点接口名称不合法
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">EXTENSION_INTERFACE_NAME_ILLEGAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;extension_interface_name_illegal&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 扩展点不合法
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">EXTENSION_ILLEGAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;extension_illegal&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * 扩展点定义重复
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">EXTENSION_DEFINE_DUPLICATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;extension_define_duplicate&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Resource</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ExtensionRepository</span><span class="w"> </span><span class="n">extensionRepository</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">EXTENSION_EXTPT_NAMING</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;ExtPt&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doRegistration</span><span class="p">(</span><span class="n">ExtensionPointI</span><span class="w"> </span><span class="n">extensionObject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">extensionClz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extensionObject</span><span class="p">.</span><span class="na">getClass</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">AopUtils</span><span class="p">.</span><span class="na">isAopProxy</span><span class="p">(</span><span class="n">extensionObject</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">extensionClz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AopUtils</span><span class="p">.</span><span class="na">getTargetClass</span><span class="p">(</span><span class="n">extensionObject</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Extension</span><span class="w"> </span><span class="n">extensionAnn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AnnotatedElementUtils</span><span class="p">.</span><span class="na">findMergedAnnotation</span><span class="p">(</span><span class="n">extensionClz</span><span class="p">,</span><span class="w"> </span><span class="n">Extension</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">BizScenario</span><span class="w"> </span><span class="n">bizScenario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BizScenario</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">extensionAnn</span><span class="p">.</span><span class="na">bizId</span><span class="p">(),</span><span class="w"> </span><span class="n">extensionAnn</span><span class="p">.</span><span class="na">useCase</span><span class="p">(),</span><span class="w"> </span><span class="n">extensionAnn</span><span class="p">.</span><span class="na">scenario</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">ExtensionCoordinate</span><span class="w"> </span><span class="n">extensionCoordinate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ExtensionCoordinate</span><span class="p">(</span><span class="n">calculateExtensionPoint</span><span class="p">(</span><span class="n">extensionClz</span><span class="p">),</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">.</span><span class="na">getUniqueIdentity</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">ExtensionPointI</span><span class="w"> </span><span class="n">preVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extensionRepository</span><span class="p">.</span><span class="na">getExtensionRepo</span><span class="p">().</span><span class="na">put</span><span class="p">(</span><span class="n">extensionCoordinate</span><span class="p">,</span><span class="w"> </span><span class="n">extensionObject</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">preVal</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">errMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Duplicate registration is not allowed for :&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">extensionCoordinate</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ExtensionException</span><span class="p">(</span><span class="n">EXTENSION_DEFINE_DUPLICATE</span><span class="p">,</span><span class="w"> </span><span class="n">errMessage</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doRegistrationExtensions</span><span class="p">(</span><span class="n">ExtensionPointI</span><span class="w"> </span><span class="n">extensionObject</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">extensionClz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extensionObject</span><span class="p">.</span><span class="na">getClass</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">AopUtils</span><span class="p">.</span><span class="na">isAopProxy</span><span class="p">(</span><span class="n">extensionObject</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">extensionClz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">getUserClass</span><span class="p">(</span><span class="n">extensionObject</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Extensions</span><span class="w"> </span><span class="n">extensionsAnnotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AnnotationUtils</span><span class="p">.</span><span class="na">findAnnotation</span><span class="p">(</span><span class="n">extensionClz</span><span class="p">,</span><span class="w"> </span><span class="n">Extensions</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//Support multiple extensions registration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">bizIds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extensionsAnnotation</span><span class="p">.</span><span class="na">bizId</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">useCases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extensionsAnnotation</span><span class="p">.</span><span class="na">useCase</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">scenarios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extensionsAnnotation</span><span class="p">.</span><span class="na">scenario</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">bizId</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">bizIds</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">useCase</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">useCases</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">scenario</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">scenarios</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">BizScenario</span><span class="w"> </span><span class="n">bizScenario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BizScenario</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">bizId</span><span class="p">,</span><span class="w"> </span><span class="n">useCase</span><span class="p">,</span><span class="w"> </span><span class="n">scenario</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">ExtensionCoordinate</span><span class="w"> </span><span class="n">extensionCoordinate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ExtensionCoordinate</span><span class="p">(</span><span class="n">calculateExtensionPoint</span><span class="p">(</span><span class="n">extensionClz</span><span class="p">),</span><span class="w"> </span><span class="n">bizScenario</span><span class="p">.</span><span class="na">getUniqueIdentity</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">ExtensionPointI</span><span class="w"> </span><span class="n">preVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extensionRepository</span><span class="p">.</span><span class="na">getExtensionRepo</span><span class="p">().</span><span class="na">put</span><span class="p">(</span><span class="n">extensionCoordinate</span><span class="p">,</span><span class="w"> </span><span class="n">extensionObject</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">preVal</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="n">String</span><span class="w"> </span><span class="n">errMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Duplicate registration is not allowed for :&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">extensionCoordinate</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ExtensionException</span><span class="p">(</span><span class="n">EXTENSION_DEFINE_DUPLICATE</span><span class="p">,</span><span class="w"> </span><span class="n">errMessage</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param targetClz
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @return
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">calculateExtensionPoint</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">targetClz</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Class</span><span class="o">&lt;?&gt;[]</span><span class="w"> </span><span class="n">interfaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClassUtils</span><span class="p">.</span><span class="na">getAllInterfacesForClass</span><span class="p">(</span><span class="n">targetClz</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">interfaces</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">interfaces</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ExtensionException</span><span class="p">(</span><span class="n">EXTENSION_ILLEGAL</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Please assign a extension point interface for &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">targetClz</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Class</span><span class="w"> </span><span class="n">intf</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">interfaces</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">extensionPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intf</span><span class="p">.</span><span class="na">getSimpleName</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">extensionPoint</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">EXTENSION_EXTPT_NAMING</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">intf</span><span class="p">.</span><span class="na">getName</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">errMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Your name of ExtensionPoint for &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">targetClz</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="s">&#34; is not valid, must be end of &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">EXTENSION_EXTPT_NAMING</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ExtensionException</span><span class="p">(</span><span class="n">EXTENSION_INTERFACE_NAME_ILLEGAL</span><span class="p">,</span><span class="w"> </span><span class="n">errMessage</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>定义扩展点执行器（本质上是一种策略模式）
+<ul>
+<li>通过接口和业务模式，生成扩展点坐标，通过不同的扩展点坐标，定位到不同的扩展点类</li>
+<li>使用函数式接口来执行不同的扩展点类的方法</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>抽象扩展点执行器，包含了函数式接口的执行方法</p>]]></description>
 </item>
 <item>
     <title>设计模式</title>
@@ -50,7 +865,31 @@
     <pubDate>Sun, 11 Jun 2023 14:38:20 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
-    <description><![CDATA[设计模式 设计原则 开闭原则 对扩展开放 对修改关闭 通过扩展来实现变化，而不是通过修改已有代码来实现变化 里氏替换原则 子类可以实现父类的抽象方法，但不]]></description>
+    <description><![CDATA[<h1 id="设计模式">设计模式</h1>
+<h2 id="设计原则">设计原则</h2>
+<ul>
+<li>开闭原则
+<ul>
+<li>对扩展开放</li>
+<li>对修改关闭</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>通过扩展来实现变化，而不是通过修改已有代码来实现变化</p>
+</blockquote>
+<ul>
+<li>里氏替换原则
+<ul>
+<li>子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法</li>
+<li>子类可以有自己独有的方法</li>
+<li>覆盖或实现父类的方法时，输入参数可以被放大，更宽松</li>
+<li>覆盖或实现父类的方法时，输出参数可以被缩小，更严格</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>保证将所有父类替换为子类，程序的运行没有任何问题</p>]]></description>
 </item>
 <item>
     <title>Linux基础概念扫盲</title>
@@ -58,7 +897,36 @@
     <pubDate>Fri, 19 May 2023 15:31:36 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E6%89%AB%E7%9B%B2/</guid>
-    <description><![CDATA[Linux基础概念扫盲 XDG XDG代表&quot;Cross-Desktop Group&quot;，是来自freedesktop1的一系列规范 旨]]></description>
+    <description><![CDATA[<h1 id="linux基础概念扫盲">Linux基础概念扫盲</h1>
+<h2 id="xdg">XDG</h2>
+<ul>
+<li>XDG代表&quot;Cross-Desktop Group&quot;，是来自freedesktop<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>的一系列规范</li>
+<li>旨在标准化各类系统上的桌面和其他GUI应用程序</li>
+<li>广泛采用的一些协议：
+<ul>
+<li><code>Autostart</code>：应用程序如何在用户登录后自动启动，以及可移动媒体如何请求执行特定应用程序或在安装媒体后请求打开媒体上的特定文件。</li>
+<li><code>桌面基本目录(basedir)</code>：桌面应如何定位文件，例如配置文件或应用程序数据文件。</li>
+<li><code>桌面条目 (.desktop)</code>：描述有关应用程序信息的文件，例如名称、图标和描述。这些文件用于应用程序启动器和创建可启动的应用程序菜单。</li>
+<li><code>桌面菜单 (menu)</code>：如何从桌面条目构建菜单。</li>
+<li><code>文件管理器 D-Bus 接口</code>：与桌面文件管理器交互的常用方式。</li>
+<li><code>文件 URI</code>：如何创建和解释解释file://URI，用于拖放和其​​他桌面用途。</li>
+<li><code>免费媒体播放器规范</code>：跨播放器和媒体格式存储和读取元数据的标准方法。</li>
+<li><code>图标主题</code>：存储图标主题的常用方式。</li>
+<li><code>媒体播放器远程接口规范 (MPRIS)</code>：控制媒体播放器的 D-Bus 接口</li>
+<li><code>共享 MIME 数据库（shared-mime-info）</code>：包含常见的 MIME 类型、描述和确定文件类型的规则。</li>
+<li><code>启动通知</code>：一种允许桌面环境跟踪应用程序启动、提供用户反馈和其他功能的机制。</li>
+<li><code>Trash</code>：一种常见的方式，所有“垃圾桶”实现都应该存储、列出和取消删除已删除的文件。</li>
+<li><code>XML 书签交换语言 (XBEL)</code>：一种互联网“书签”交换格式。</li>
+</ul>
+</li>
+<li>一些常用的协议：
+<ul>
+<li><code>The MIME Applications specification</code>：决定了默认程序</li>
+</ul>
+</li>
+</ul>
+<h2 id="xdg目录规范">XDG目录规范</h2>
+<p>XDG Base Directory Specification</p>]]></description>
 </item>
 <item>
     <title>Linux射频管理</title>
@@ -66,7 +934,51 @@
     <pubDate>Sun, 14 May 2023 00:31:52 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/linux%E5%B0%84%E9%A2%91%E7%AE%A1%E7%90%86/</guid>
-    <description><![CDATA[Linux射频管理 rfkill介绍 rfkill命令可以用来打开和关闭WiFi、蓝牙等射频开关。 射频（rf）是Radio Frequency的缩]]></description>
+    <description><![CDATA[<h1 id="linux射频管理">Linux射频管理</h1>
+<h2 id="rfkill介绍"><code>rfkill</code>介绍</h2>
+<ul>
+<li><code>rfkill</code>命令可以用来打开和关闭WiFi、蓝牙等射频开关。</li>
+<li>射频（rf）是Radio Frequency的缩写，<code>rfkill</code>可以管理wifi、wlan、bluetooth、uwb、wimax、wwan、gps、fm、nfc无线信号。
+这种开关在某种程度上能够控制硬件的状态，使用的例子有：飞行模式、硬件节能。</li>
+</ul>
+<h2 id="命令">命令</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 罗列出所有的无线设备</span>
+</span></span><span class="line"><span class="cl">rfkill list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 关闭所有的射频设备</span>
+</span></span><span class="line"><span class="cl">rfkill block all
+</span></span><span class="line"><span class="cl"><span class="c1"># 打开所有的射频设备</span>
+</span></span><span class="line"><span class="cl">rfkill unblock all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 可以关掉/打开某种类型的设备，例如WiFi</span>
+</span></span><span class="line"><span class="cl">rfkill block wifi
+</span></span><span class="line"><span class="cl">rfkill unblock wifi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 也可以对于某个设备进行打开和关闭</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 下面的编号可以从`rfkill list`中查看</span>
+</span></span><span class="line"><span class="cl">rfkill block/unblock 编号
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 <item>
     <title>Conda使用教程</title>
@@ -74,7 +986,191 @@
     <pubDate>Tue, 09 May 2023 09:34:28 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/conda%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[Conda使用教程 安装 Windows 官网下载exe文件，直接安装 Linux 下载.sh文件 授权chmod +x Miniconda3-latest-Linux-x86_64.sh 运行./Miniconda3-latest-Linux]]></description>
+    <description><![CDATA[<h1 id="conda使用教程">Conda使用教程</h1>
+<h2 id="安装">安装</h2>
+<h3 id="windows">Windows</h3>
+<ul>
+<li>官网下载<code>exe</code>文件，直接安装</li>
+</ul>
+<h3 id="linux">Linux</h3>
+<ul>
+<li>下载<code>.sh</code>文件</li>
+<li>授权<code>chmod +x Miniconda3-latest-Linux-x86_64.sh</code></li>
+<li>运行<code>./Miniconda3-latest-Linux-x86_64.sh</code></li>
+</ul>
+<h3 id="macos">MacOS</h3>
+<ul>
+<li>Miniconda
+<ul>
+<li>下载<code>.sh</code>文件</li>
+<li>运行<code>./Miniconda3-latest-Linux-x86_64.sh</code></li>
+</ul>
+</li>
+<li>Anaconda
+<ul>
+<li>官网下载<code>pkg</code>文件，直接安装</li>
+</ul>
+</li>
+</ul>
+<h2 id="创建conda环境">创建Conda环境</h2>
+<ul>
+<li>在默认位置创建Python环境：<code>conda create -n/--name &lt;env_name&gt; python=&lt;version&gt; </code></li>
+<li>在指定位置创建Python环境：<code>conda create -p /path/to/file python=&lt;version&gt; </code></li>
+</ul>
+<h2 id="查看环境">查看环境</h2>
+<ul>
+<li>查看所有环境：<code>conda env list </code></li>
+</ul>
+<h2 id="切换环境">切换环境</h2>
+<ul>
+<li>切换环境：<code>conda activate &lt;env_name&gt;</code></li>
+<li>退出环境：<code>conda deactivate</code></li>
+</ul>
+<h2 id="删除环境或依赖">删除环境或依赖</h2>
+<ul>
+<li>删除环境：<code>conda remove -n/--name &lt;env_name&gt; --all</code></li>
+<li>删除依赖：<code>conda remove -n/--name &lt;env_name&gt; &lt;package_name&gt;</code></li>
+</ul>
+<h2 id="导出和导入环境">导出和导入环境</h2>
+<ul>
+<li>导出环境：<code>conda list --explicit &gt; /path/to/file</code></li>
+<li>导入环境：<code>conda install --file /path/to/file</code></li>
+</ul>
+<h2 id="查看已安装依赖">查看已安装依赖</h2>
+<ul>
+<li>查看所有依赖：<code>conda list</code></li>
+<li>查看单个依赖：<code>conda list -n &lt;package_name&gt;</code></li>
+</ul>
+<h2 id="搜索依赖">搜索依赖</h2>
+<ul>
+<li>搜索依赖：<code>conda search &lt;package_name&gt;</code></li>
+</ul>
+<h2 id="安装依赖">安装依赖</h2>
+<ul>
+<li>（已激活环境）安装依赖：<code>conda install &lt;package_name&gt;</code></li>
+<li>（未激活环境）安装依赖：<code>conda install -n/--name &lt;env_name&gt; &lt;package_name&gt;</code></li>
+</ul>
+<h2 id="更换镜像源">更换镜像源</h2>
+<h3 id="编辑condarc文件">编辑<code>.condarc</code>文件</h3>
+<ul>
+<li>阿里源</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">channels:
+</span></span><span class="line"><span class="cl">  - defaults
+</span></span><span class="line"><span class="cl">show_channel_urls: true
+</span></span><span class="line"><span class="cl">default_channels:
+</span></span><span class="line"><span class="cl">  - http://mirrors.aliyun.com/anaconda/pkgs/main
+</span></span><span class="line"><span class="cl">  - http://mirrors.aliyun.com/anaconda/pkgs/r
+</span></span><span class="line"><span class="cl">  - http://mirrors.aliyun.com/anaconda/pkgs/msys2
+</span></span><span class="line"><span class="cl">custom_channels:
+</span></span><span class="line"><span class="cl">  conda-forge: http://mirrors.aliyun.com/anaconda/cloud
+</span></span><span class="line"><span class="cl">  msys2: http://mirrors.aliyun.com/anaconda/cloud
+</span></span><span class="line"><span class="cl">  bioconda: http://mirrors.aliyun.com/anaconda/cloud
+</span></span><span class="line"><span class="cl">  menpo: http://mirrors.aliyun.com/anaconda/cloud
+</span></span><span class="line"><span class="cl">  pytorch: http://mirrors.aliyun.com/anaconda/cloud
+</span></span><span class="line"><span class="cl">  simpleitk: http://mirrors.aliyun.com/anaconda/cloud
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>清华源</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">channels:
+</span></span><span class="line"><span class="cl">  - defaults
+</span></span><span class="line"><span class="cl">show_channel_urls: true
+</span></span><span class="line"><span class="cl">default_channels:
+</span></span><span class="line"><span class="cl">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+</span></span><span class="line"><span class="cl">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+</span></span><span class="line"><span class="cl">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+</span></span><span class="line"><span class="cl">custom_channels:
+</span></span><span class="line"><span class="cl">  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="命令行配置">命令行配置</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#查看当前conda配置
+</span></span><span class="line"><span class="cl">conda config --show channels
+</span></span><span class="line"><span class="cl">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+</span></span><span class="line"><span class="cl">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+</span></span><span class="line"><span class="cl">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud//pytorch/
+</span></span><span class="line"><span class="cl">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">#设置搜索是显示通道地址
+</span></span><span class="line"><span class="cl">conda config --set show_channel_urls yes
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="默认不进入conda环境">默认不进入conda环境</h2>
+<h3 id="命令行">命令行</h3>
+<ul>
+<li>运行命令：<code>conda config --set auto_activate_base false</code></li>
+</ul>
+<h3 id="更改配置文件">更改配置文件</h3>
+<ul>
+<li>修改<code>.bashrc</code>或者<code>.zshrc</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1"># export PATH=&#34;~/anaconda/bin:$PATH&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="n">PATH</span><span class="o">=</span><span class="s2">&#34;$PATH：~/anaconda/bin&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 <item>
     <title>Fcitx5安装</title>
@@ -82,7 +1178,38 @@
     <pubDate>Fri, 05 May 2023 17:13:39 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/fcitx5%E5%AE%89%E8%A3%85/</guid>
-    <description><![CDATA[Fcitx5安装 安装fcitx5 安装中文addon：fcitx5-chinese-addons 安装qt支持：fcitx5-qt 安装gtk支持]]></description>
+    <description><![CDATA[<h1 id="fcitx5安装">Fcitx5安装</h1>
+<ul>
+<li>安装fcitx5</li>
+<li>安装中文addon：fcitx5-chinese-addons</li>
+<li>安装qt支持：fcitx5-qt</li>
+<li>安装gtk支持：fcitx5-gtk</li>
+<li>安装词库：fcitx5-pinyin-zhwiki，fcitx5-pinyin-zhwiki,fcitx5-pinyin-zhwiki</li>
+<li>配置fcitx5
+<ul>
+<li>安装fcitx5-configtool</li>
+<li>打开fcitx5-configtool，在input method中添加pinyin</li>
+</ul>
+</li>
+<li>编辑<code>/etc/environment</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GTK_IM_MODULE=fcitx
+</span></span><span class="line"><span class="cl">QT_IM_MODULE=fcitx
+</span></span><span class="line"><span class="cl">XMODIFIERS=@im=fcitx
+</span></span><span class="line"><span class="cl">SDL_IM_MODULE=fcitx
+</span></span><span class="line"><span class="cl">GLFW_IM_MODULE=ibus
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 </channel>
 </rss>

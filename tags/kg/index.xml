@@ -10,7 +10,31 @@
     <pubDate>Fri, 01 Jul 2022 13:37:07 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/simkgc/</guid>
-    <description><![CDATA[SimKGC模型 Novelty 使用InfoNCE损失改进原有边际排名损失，使其更专注于hard negative 使用IB,PB和SN三种负样本种类来增加负样本数量 使用图]]></description>
+    <description><![CDATA[<h1 id="simkgc模型">SimKGC模型</h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>使用InfoNCE损失改进原有边际排名损失，使其更专注于hard negative</li>
+<li>使用IB,PB和SN三种负样本种类来增加负样本数量</li>
+<li>使用图结构重排序来感知图结构</li>
+</ul>
+<h2 id="问题和动机">问题和动机</h2>
+<ul>
+<li>最新的基于文本（预训练模型）的方法可以访问到额外的输入信息
+<ul>
+<li>归纳学习到训练过中看不到的实体的表示</li>
+</ul>
+</li>
+<li>但性能仍然大幅弱于基于嵌入的方法
+<ul>
+<li>基于文本的方法中对比学习的效率过低，主要是负样本太少</li>
+<li>基于嵌入的方法不涉及昂贵的文本编码计算，因此可以使用大量负样本</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>同一时间
+默认配置下，RotatE在Wikidata5M数据集上可以训练<strong>1000</strong>个负样本为<strong>64</strong>的epoch
+基于文本的方法KEPLER只能训练<strong>30</strong>个epoch，负样本数量为<strong>1</strong></p>]]></description>
 </item>
 <item>
     <title>PairRE</title>
@@ -18,7 +42,14 @@
     <pubDate>Thu, 09 Jun 2022 18:40:24 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/pairre/</guid>
-    <description><![CDATA[PairRE Novelty 既考虑了复杂关系建模的问题，又考虑了多种模式的关系 通过修改RotatE的公式，将关系参数改为头尾两个，从而可以对复杂关系进行建模(Rot]]></description>
+    <description><![CDATA[<h1 id="pairre">PairRE</h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>既考虑了复杂关系建模的问题，又考虑了多种模式的关系</li>
+<li>通过修改RotatE的公式，将关系参数改为头尾两个，从而可以对复杂关系进行建模(RotatE本身就可以对多种模式关系建模)</li>
+</ul>
+<blockquote>
+<p>根据本文分析，RotatE本身可以对N-1关系建模，但是不能对1-N和N-N关系建模</p>]]></description>
 </item>
 <item>
     <title>KBGAN</title>
@@ -26,7 +57,54 @@
     <pubDate>Thu, 09 Jun 2022 18:40:16 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/kbgan/</guid>
-    <description><![CDATA[KBGAN模型1 Novelty 首次使用生成对抗网路的思想，全篇关注负样本的生成质量问题 采用生成对抗网络，采用概率模型作为生成器，采用距离模型作为鉴别器，]]></description>
+    <description><![CDATA[<h1 id="kbgan模型1">KBGAN模型<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>首次使用生成对抗网路的思想，全篇关注负样本的生成质量问题</li>
+<li>采用生成对抗网络，采用概率模型作为生成器，采用距离模型作为鉴别器，训练鉴别器</li>
+<li>使用强化学习的策略梯度方法来训练生成器</li>
+</ul>
+<h2 id="问题和动机">问题和动机</h2>
+<ul>
+<li>过去知识图谱嵌入领域的负采样仅仅根据概率来采样有以下两个问题
+<ul>
+<li>假负样本问题，有可能会有正确样本被当成负样本来采样</li>
+<li>低质量负样本问题，会产生一些质量很低的，对训练意义不大的样本(很容易与正样本区分开的样本，对训练贡献很小)</li>
+</ul>
+</li>
+<li>收到对抗生成网络思想的影响，本文采用生成器来生成高质量负样本，采用鉴别器来计算嵌入
+<ul>
+<li>生成器使用基于概率的log-loss损失</li>
+<li>鉴别器使用基于距离的margin-loss损失</li>
+<li>由于存在离散的生成过程，因此不能使用基于梯度的方法进行优化，本文采用强化学习中的方差减少方法来进行优化。</li>
+</ul>
+</li>
+</ul>
+<h2 id="相关工作">相关工作</h2>
+<ul>
+<li>GAN最早用于生成图像
+<ul>
+<li>生成器接受噪声输入并输出图像</li>
+<li>鉴别器是一种分类器，将图像分类为真和假。</li>
+<li>训练GAN时，生成器试图生成真实图像来欺骗鉴别器，鉴别器试图将其与真是图像区分开。</li>
+<li>GAN还能够生成满足特定要求的样本</li>
+</ul>
+</li>
+<li>用于自然语言处理
+<ul>
+<li>梯度传播不适用于离散采样的步骤，因此不能使用原始GAN来生成离散样本，如自然语言句子或三元组</li>
+<li>SEQGAN使用强化学习来解决离散问题，使用了策略梯度和其他技巧来训练生成器。</li>
+</ul>
+</li>
+<li>鉴别器不一定是分类器。后来很多方法使用回归器作为鉴别器。</li>
+</ul>
+<h2 id="过去的解决方法">过去的解决方法</h2>
+<ul>
+<li>过去采用随机替换来生成负样本，但这样容易产生低质量的样本</li>
+<li>对于log-softmax损失函数而言，通常会为一个正样本产生很多个负样本，因此总有高质量的负样本可以使用，因此低质量样本的影响不大</li>
+</ul>
+<blockquote>
+<p>论文<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>(ComplEx)研究表明，当采用100：1的负/正比例会使得效果更佳</p>]]></description>
 </item>
 <item>
     <title>CAKE</title>
@@ -34,7 +112,18 @@
     <pubDate>Wed, 25 May 2022 15:27:53 &#43;0800</pubDate>
     <author>loveLZZ</author>
     <guid>https://leviathanion.github.io/cake/</guid>
-    <description><![CDATA[CAKE模型1 Novelty 首次既考虑了假阴性问题，又考虑了低质量的问题，特别是假阴性问题几乎无人考虑 将数据集做一定的处理，进行标注，为每个实体赋予一到]]></description>
+    <description><![CDATA[<h1 id="cake模型1">CAKE模型<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h1>
+<h2 id="novelty">Novelty</h2>
+<ul>
+<li>首次既考虑了假阴性问题，又考虑了低质量的问题，特别是假阴性问题几乎无人考虑</li>
+<li>将数据集做一定的处理，进行标注，为每个实体赋予一到多个概念</li>
+<li>基于概念生成常识，也即（概念，关系，概念）的三元组为常识1和（概念组，关系，概念组）为常识2</li>
+<li>使用域采样的假设，分别对1-N中1和N中的采用不同的采样方式，首先选取概念，然后从概念组中生成负样本</li>
+<li>最后链路预测选择实体时，选择符合常识1的概念中的实体</li>
+</ul>
+<h2 id="问题和动机">问题和动机</h2>
+<blockquote>
+<p>本论文主要关注KGE中存在的问题</p>]]></description>
 </item>
 </channel>
 </rss>

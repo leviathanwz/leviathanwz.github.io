@@ -7,7 +7,7 @@
         <title>Python学习笔记 - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/python/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="Python学习笔记">
-  <meta property="og:description" content="Python学习笔记 1.python基础 1.1python语法常识 python语法采用缩进格式而不是括号来进行代码块分割的 缩进没有空格个数或">
+  <meta property="og:description" content="Python学习笔记 1.python基础 1.1python语法常识 python语法采用缩进格式而不是括号来进行代码块分割的 缩进没有空格个数或者tap键的约束，但应坚持使用四个空格缩进 当语句以:结尾时，缩进的语句视为代码块 以#开头的是注释 复制粘贴功能基本等于失效，粘贴的代码必须检查缩进是否正确 python是大小写敏感的，写错了大小写，程序会报错 1 2 3 4 5 6 #print a = 100 if a &gt;= 0: print(a) else: print(-a) 1.2基本数据类型 1.2.1数据类型分类 1.2.1.1数字型与非数字型 python中的变量一般分为两种类型 数字型和非数字型 数字型 整型 浮点型 布尔型 复数型 非数字型 字符串 列表（list） 元组(tuple) 字典(dict) 1.2.1.2不可变类型与可变类型 python中变量都是通过对数据的引用来定义的。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="Python学习笔记">
-  <meta name="twitter:description" content="Python学习笔记 1.python基础 1.1python语法常识 python语法采用缩进格式而不是括号来进行代码块分割的 缩进没有空格个数或">
+  <meta name="twitter:description" content="Python学习笔记 1.python基础 1.1python语法常识 python语法采用缩进格式而不是括号来进行代码块分割的 缩进没有空格个数或者tap键的约束，但应坚持使用四个空格缩进 当语句以:结尾时，缩进的语句视为代码块 以#开头的是注释 复制粘贴功能基本等于失效，粘贴的代码必须检查缩进是否正确 python是大小写敏感的，写错了大小写，程序会报错 1 2 3 4 5 6 #print a = 100 if a &gt;= 0: print(a) else: print(-a) 1.2基本数据类型 1.2.1数据类型分类 1.2.1.1数字型与非数字型 python中的变量一般分为两种类型 数字型和非数字型 数字型 整型 浮点型 布尔型 复数型 非数字型 字符串 列表（list） 元组(tuple) 字典(dict) 1.2.1.2不可变类型与可变类型 python中变量都是通过对数据的引用来定义的。">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/python/" /><link rel="prev" href="https://leviathanion.github.io/c/" /><link rel="next" href="https://leviathanion.github.io/cake/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -454,42 +454,42 @@
 <hr>
 <h4 id="131算术运算符">1.3.1算术运算符</h4>
 <table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>**</td>
-<td>乘幂</td>
-</tr>
-<tr>
-<td>+</td>
-<td>加法</td>
-</tr>
-<tr>
-<td>-</td>
-<td>减法</td>
-</tr>
-<tr>
-<td>/</td>
-<td>除法</td>
-</tr>
-<tr>
-<td>*</td>
-<td>乘法</td>
-</tr>
-<tr>
-<td>//</td>
-<td>取整数</td>
-</tr>
-<tr>
-<td>%</td>
-<td>取余</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">运算符</th>
+          <th style="text-align: left">描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">**</td>
+          <td style="text-align: left">乘幂</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">+</td>
+          <td style="text-align: left">加法</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">减法</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/</td>
+          <td style="text-align: left">除法</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">*</td>
+          <td style="text-align: left">乘法</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">//</td>
+          <td style="text-align: left">取整数</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">%</td>
+          <td style="text-align: left">取余</td>
+      </tr>
+  </tbody>
 </table>
 <blockquote>
 <p><code>*</code>还可用于字符串，结果是将运算符重复n次</p>
@@ -498,169 +498,169 @@
 <h4 id="132赋值运算符">1.3.2赋值运算符</h4>
 <hr>
 <table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>描述</th>
-<th>实例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>=</td>
-<td>赋值</td>
-<td>c = a</td>
-</tr>
-<tr>
-<td>+=</td>
-<td>加法赋值</td>
-<td>c += a c = c + a</td>
-</tr>
-<tr>
-<td>-=</td>
-<td>减法赋值</td>
-<td>c -= a c = c - a</td>
-</tr>
-<tr>
-<td>/=</td>
-<td>除法赋值</td>
-<td>c /= a c = c / a</td>
-</tr>
-<tr>
-<td>*=</td>
-<td>乘法赋值</td>
-<td>c *= a c = c * a</td>
-</tr>
-<tr>
-<td>//=</td>
-<td>取整数赋值</td>
-<td>c //=a c = c //a</td>
-</tr>
-<tr>
-<td>%=</td>
-<td>取余赋值</td>
-<td>c %= a c = c % a</td>
-</tr>
-<tr>
-<td>**=</td>
-<td>幂赋值</td>
-<td>c **= a  c = c ** a</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">运算符</th>
+          <th style="text-align: left">描述</th>
+          <th style="text-align: left">实例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">=</td>
+          <td style="text-align: left">赋值</td>
+          <td style="text-align: left">c = a</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">+=</td>
+          <td style="text-align: left">加法赋值</td>
+          <td style="text-align: left">c += a c = c + a</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-=</td>
+          <td style="text-align: left">减法赋值</td>
+          <td style="text-align: left">c -= a c = c - a</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/=</td>
+          <td style="text-align: left">除法赋值</td>
+          <td style="text-align: left">c /= a c = c / a</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">*=</td>
+          <td style="text-align: left">乘法赋值</td>
+          <td style="text-align: left">c *= a c = c * a</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">//=</td>
+          <td style="text-align: left">取整数赋值</td>
+          <td style="text-align: left">c //=a c = c //a</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">%=</td>
+          <td style="text-align: left">取余赋值</td>
+          <td style="text-align: left">c %= a c = c % a</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">**=</td>
+          <td style="text-align: left">幂赋值</td>
+          <td style="text-align: left">c **= a  c = c ** a</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="133比较运算符">1.3.3比较运算符</h4>
 <table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>描述</th>
-<th>举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>==</td>
-<td>等于判断</td>
-<td>a==b</td>
-</tr>
-<tr>
-<td>!=</td>
-<td>不等于判断</td>
-<td>a!=b</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>大于判断</td>
-<td>a&gt;b</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>小于判断</td>
-<td>a&lt;b</td>
-</tr>
-<tr>
-<td>&gt;=</td>
-<td>大于等于判断</td>
-<td>a&gt;=b</td>
-</tr>
-<tr>
-<td>&lt;=</td>
-<td>小于等于判断</td>
-<td>a&lt;=b</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">运算符</th>
+          <th style="text-align: left">描述</th>
+          <th style="text-align: left">举例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">==</td>
+          <td style="text-align: left">等于判断</td>
+          <td style="text-align: left">a==b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">!=</td>
+          <td style="text-align: left">不等于判断</td>
+          <td style="text-align: left">a!=b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&gt;</td>
+          <td style="text-align: left">大于判断</td>
+          <td style="text-align: left">a&gt;b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&lt;</td>
+          <td style="text-align: left">小于判断</td>
+          <td style="text-align: left">a&lt;b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&gt;=</td>
+          <td style="text-align: left">大于等于判断</td>
+          <td style="text-align: left">a&gt;=b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&lt;=</td>
+          <td style="text-align: left">小于等于判断</td>
+          <td style="text-align: left">a&lt;=b</td>
+      </tr>
+  </tbody>
 </table>
 <blockquote>
 <p>结果为True和False</p>
 </blockquote>
 <h4 id="134逻辑运算符">1.3.4逻辑运算符</h4>
 <table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>描述</th>
-<th>举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>and</td>
-<td>if <em>x</em> is false, then <em>y</em>, else <em>x</em></td>
-<td>a and b</td>
-</tr>
-<tr>
-<td>or</td>
-<td>if <em>x</em> is false, then <em>x</em>, else <em>y</em></td>
-<td>a or b</td>
-</tr>
-<tr>
-<td>not</td>
-<td>if <em>x</em> is false, then <code>True</code>, else <code>False</code></td>
-<td>not a</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">运算符</th>
+          <th style="text-align: left">描述</th>
+          <th style="text-align: left">举例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">and</td>
+          <td style="text-align: left">if <em>x</em> is false, then <em>y</em>, else <em>x</em></td>
+          <td style="text-align: left">a and b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">or</td>
+          <td style="text-align: left">if <em>x</em> is false, then <em>x</em>, else <em>y</em></td>
+          <td style="text-align: left">a or b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">not</td>
+          <td style="text-align: left">if <em>x</em> is false, then <code>True</code>, else <code>False</code></td>
+          <td style="text-align: left">not a</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="135位运算符">1.3.5位运算符</h4>
 <table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>描述</th>
-<th>举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>|</td>
-<td>按位与</td>
-<td>a | b</td>
-</tr>
-<tr>
-<td>^</td>
-<td>按位异或</td>
-<td>a ^ b</td>
-</tr>
-<tr>
-<td>&amp;</td>
-<td>按位与</td>
-<td>a&amp;b</td>
-</tr>
-<tr>
-<td>&laquo;</td>
-<td>左移</td>
-<td>a&laquo;b</td>
-</tr>
-<tr>
-<td>&raquo;</td>
-<td>右移</td>
-<td>a&raquo;b</td>
-</tr>
-<tr>
-<td>~</td>
-<td>按位取反</td>
-<td>~a</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">运算符</th>
+          <th style="text-align: left">描述</th>
+          <th style="text-align: left">举例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">|</td>
+          <td style="text-align: left">按位与</td>
+          <td style="text-align: left">a | b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">^</td>
+          <td style="text-align: left">按位异或</td>
+          <td style="text-align: left">a ^ b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&amp;</td>
+          <td style="text-align: left">按位与</td>
+          <td style="text-align: left">a&amp;b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&laquo;</td>
+          <td style="text-align: left">左移</td>
+          <td style="text-align: left">a&laquo;b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&raquo;</td>
+          <td style="text-align: left">右移</td>
+          <td style="text-align: left">a&raquo;b</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">~</td>
+          <td style="text-align: left">按位取反</td>
+          <td style="text-align: left">~a</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="14字符串和编码">1.4字符串和编码</h3>
 <hr>
@@ -1635,35 +1635,35 @@
 </div><h4 id="175高级数据类型公共方法">1.7.5高级数据类型公共方法</h4>
 <h5 id="1751公共函数">1.7.5.1公共函数</h5>
 <table>
-<thead>
-<tr>
-<th>函数</th>
-<th>描述</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>len(a)</td>
-<td>计算容器中元素的个数</td>
-<td></td>
-</tr>
-<tr>
-<td>del(a)</td>
-<td>删除变量</td>
-<td>注意与关键字区分</td>
-</tr>
-<tr>
-<td>max(a)</td>
-<td>返回容器中的最大值</td>
-<td>如果是字典，仅针对key值</td>
-</tr>
-<tr>
-<td>min(a)</td>
-<td>返回容器的最小值</td>
-<td>如果是字典，仅针对Key值</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">函数</th>
+          <th style="text-align: left">描述</th>
+          <th style="text-align: left">备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">len(a)</td>
+          <td style="text-align: left">计算容器中元素的个数</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">del(a)</td>
+          <td style="text-align: left">删除变量</td>
+          <td style="text-align: left">注意与关键字区分</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">max(a)</td>
+          <td style="text-align: left">返回容器中的最大值</td>
+          <td style="text-align: left">如果是字典，仅针对key值</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">min(a)</td>
+          <td style="text-align: left">返回容器的最小值</td>
+          <td style="text-align: left">如果是字典，仅针对Key值</td>
+      </tr>
+  </tbody>
 </table>
 <h5 id="1752切片字符串元组列表支持字典不支持">1.7.5.2切片(字符串，元组，列表支持，字典不支持)</h5>
 <ul>
@@ -1675,52 +1675,52 @@
 <p>列表中先相加再赋值，并<strong>不会</strong>调用<code>extend()</code>方法</p>
 </blockquote>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">运算符</th>
-<th>举例</th>
-<th>结果</th>
-<th>描述</th>
-<th>支持的数据类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">+</td>
-<td>[1,2]+[3,4]</td>
-<td>[1,2,3,4]</td>
-<td>合并</td>
-<td>字符串，元组，列表(生成一个新的)</td>
-</tr>
-<tr>
-<td style="text-align:center">*</td>
-<td>[&ldquo;Hi&rdquo;]*4</td>
-<td>[&ldquo;Hi&rdquo;,&ldquo;Hi&rdquo;,&ldquo;Hi&rdquo;,&ldquo;Hi&rdquo;]</td>
-<td>重复</td>
-<td>字符串，元组，列表</td>
-</tr>
-<tr>
-<td style="text-align:center">in</td>
-<td>3 in(1,2,3)</td>
-<td>True</td>
-<td>元素是否存在</td>
-<td>字符串，元组，列表，字典(字典中，必须要用key)</td>
-</tr>
-<tr>
-<td style="text-align:center">not in</td>
-<td>3 not in(1,2,3)</td>
-<td>False</td>
-<td>元素是否不存在</td>
-<td>字符串，元组，列表，字典</td>
-</tr>
-<tr>
-<td style="text-align:center">&gt;,&gt;=,&lt;,&lt;=,==</td>
-<td>(1,2,3)&lt;(2,2,3)</td>
-<td>True</td>
-<td>元素比较</td>
-<td>字符串，元组，列表</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">运算符</th>
+          <th style="text-align: left">举例</th>
+          <th style="text-align: left">结果</th>
+          <th style="text-align: left">描述</th>
+          <th style="text-align: left">支持的数据类型</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">+</td>
+          <td style="text-align: left">[1,2]+[3,4]</td>
+          <td style="text-align: left">[1,2,3,4]</td>
+          <td style="text-align: left">合并</td>
+          <td style="text-align: left">字符串，元组，列表(生成一个新的)</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">*</td>
+          <td style="text-align: left">[&ldquo;Hi&rdquo;]*4</td>
+          <td style="text-align: left">[&ldquo;Hi&rdquo;,&ldquo;Hi&rdquo;,&ldquo;Hi&rdquo;,&ldquo;Hi&rdquo;]</td>
+          <td style="text-align: left">重复</td>
+          <td style="text-align: left">字符串，元组，列表</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">in</td>
+          <td style="text-align: left">3 in(1,2,3)</td>
+          <td style="text-align: left">True</td>
+          <td style="text-align: left">元素是否存在</td>
+          <td style="text-align: left">字符串，元组，列表，字典(字典中，必须要用key)</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">not in</td>
+          <td style="text-align: left">3 not in(1,2,3)</td>
+          <td style="text-align: left">False</td>
+          <td style="text-align: left">元素是否不存在</td>
+          <td style="text-align: left">字符串，元组，列表，字典</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">&gt;,&gt;=,&lt;,&lt;=,==</td>
+          <td style="text-align: left">(1,2,3)&lt;(2,2,3)</td>
+          <td style="text-align: left">True</td>
+          <td style="text-align: left">元素比较</td>
+          <td style="text-align: left">字符串，元组，列表</td>
+      </tr>
+  </tbody>
 </table>
 <ul>
 <li>成员运算符
@@ -2699,7 +2699,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

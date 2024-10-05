@@ -10,7 +10,191 @@
     <pubDate>Tue, 09 May 2023 09:34:28 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/conda%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[Conda使用教程 安装 Windows 官网下载exe文件，直接安装 Linux 下载.sh文件 授权chmod +x Miniconda3-latest-Linux-x86_64.sh 运行./Miniconda3-latest-Linux]]></description>
+    <description><![CDATA[<h1 id="conda使用教程">Conda使用教程</h1>
+<h2 id="安装">安装</h2>
+<h3 id="windows">Windows</h3>
+<ul>
+<li>官网下载<code>exe</code>文件，直接安装</li>
+</ul>
+<h3 id="linux">Linux</h3>
+<ul>
+<li>下载<code>.sh</code>文件</li>
+<li>授权<code>chmod +x Miniconda3-latest-Linux-x86_64.sh</code></li>
+<li>运行<code>./Miniconda3-latest-Linux-x86_64.sh</code></li>
+</ul>
+<h3 id="macos">MacOS</h3>
+<ul>
+<li>Miniconda
+<ul>
+<li>下载<code>.sh</code>文件</li>
+<li>运行<code>./Miniconda3-latest-Linux-x86_64.sh</code></li>
+</ul>
+</li>
+<li>Anaconda
+<ul>
+<li>官网下载<code>pkg</code>文件，直接安装</li>
+</ul>
+</li>
+</ul>
+<h2 id="创建conda环境">创建Conda环境</h2>
+<ul>
+<li>在默认位置创建Python环境：<code>conda create -n/--name &lt;env_name&gt; python=&lt;version&gt; </code></li>
+<li>在指定位置创建Python环境：<code>conda create -p /path/to/file python=&lt;version&gt; </code></li>
+</ul>
+<h2 id="查看环境">查看环境</h2>
+<ul>
+<li>查看所有环境：<code>conda env list </code></li>
+</ul>
+<h2 id="切换环境">切换环境</h2>
+<ul>
+<li>切换环境：<code>conda activate &lt;env_name&gt;</code></li>
+<li>退出环境：<code>conda deactivate</code></li>
+</ul>
+<h2 id="删除环境或依赖">删除环境或依赖</h2>
+<ul>
+<li>删除环境：<code>conda remove -n/--name &lt;env_name&gt; --all</code></li>
+<li>删除依赖：<code>conda remove -n/--name &lt;env_name&gt; &lt;package_name&gt;</code></li>
+</ul>
+<h2 id="导出和导入环境">导出和导入环境</h2>
+<ul>
+<li>导出环境：<code>conda list --explicit &gt; /path/to/file</code></li>
+<li>导入环境：<code>conda install --file /path/to/file</code></li>
+</ul>
+<h2 id="查看已安装依赖">查看已安装依赖</h2>
+<ul>
+<li>查看所有依赖：<code>conda list</code></li>
+<li>查看单个依赖：<code>conda list -n &lt;package_name&gt;</code></li>
+</ul>
+<h2 id="搜索依赖">搜索依赖</h2>
+<ul>
+<li>搜索依赖：<code>conda search &lt;package_name&gt;</code></li>
+</ul>
+<h2 id="安装依赖">安装依赖</h2>
+<ul>
+<li>（已激活环境）安装依赖：<code>conda install &lt;package_name&gt;</code></li>
+<li>（未激活环境）安装依赖：<code>conda install -n/--name &lt;env_name&gt; &lt;package_name&gt;</code></li>
+</ul>
+<h2 id="更换镜像源">更换镜像源</h2>
+<h3 id="编辑condarc文件">编辑<code>.condarc</code>文件</h3>
+<ul>
+<li>阿里源</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">channels:
+</span></span><span class="line"><span class="cl">  - defaults
+</span></span><span class="line"><span class="cl">show_channel_urls: true
+</span></span><span class="line"><span class="cl">default_channels:
+</span></span><span class="line"><span class="cl">  - http://mirrors.aliyun.com/anaconda/pkgs/main
+</span></span><span class="line"><span class="cl">  - http://mirrors.aliyun.com/anaconda/pkgs/r
+</span></span><span class="line"><span class="cl">  - http://mirrors.aliyun.com/anaconda/pkgs/msys2
+</span></span><span class="line"><span class="cl">custom_channels:
+</span></span><span class="line"><span class="cl">  conda-forge: http://mirrors.aliyun.com/anaconda/cloud
+</span></span><span class="line"><span class="cl">  msys2: http://mirrors.aliyun.com/anaconda/cloud
+</span></span><span class="line"><span class="cl">  bioconda: http://mirrors.aliyun.com/anaconda/cloud
+</span></span><span class="line"><span class="cl">  menpo: http://mirrors.aliyun.com/anaconda/cloud
+</span></span><span class="line"><span class="cl">  pytorch: http://mirrors.aliyun.com/anaconda/cloud
+</span></span><span class="line"><span class="cl">  simpleitk: http://mirrors.aliyun.com/anaconda/cloud
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>清华源</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">channels:
+</span></span><span class="line"><span class="cl">  - defaults
+</span></span><span class="line"><span class="cl">show_channel_urls: true
+</span></span><span class="line"><span class="cl">default_channels:
+</span></span><span class="line"><span class="cl">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+</span></span><span class="line"><span class="cl">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+</span></span><span class="line"><span class="cl">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+</span></span><span class="line"><span class="cl">custom_channels:
+</span></span><span class="line"><span class="cl">  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="命令行配置">命令行配置</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#查看当前conda配置
+</span></span><span class="line"><span class="cl">conda config --show channels
+</span></span><span class="line"><span class="cl">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+</span></span><span class="line"><span class="cl">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+</span></span><span class="line"><span class="cl">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud//pytorch/
+</span></span><span class="line"><span class="cl">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">#设置搜索是显示通道地址
+</span></span><span class="line"><span class="cl">conda config --set show_channel_urls yes
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="默认不进入conda环境">默认不进入conda环境</h2>
+<h3 id="命令行">命令行</h3>
+<ul>
+<li>运行命令：<code>conda config --set auto_activate_base false</code></li>
+</ul>
+<h3 id="更改配置文件">更改配置文件</h3>
+<ul>
+<li>修改<code>.bashrc</code>或者<code>.zshrc</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1"># export PATH=&#34;~/anaconda/bin:$PATH&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="n">PATH</span><span class="o">=</span><span class="s2">&#34;$PATH：~/anaconda/bin&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 <item>
     <title>Docker使用教程</title>
@@ -18,7 +202,67 @@
     <pubDate>Sat, 29 Apr 2023 11:03:25 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[Docker使用教程 Docker架构 image(镜像)：可以看作是一个root文件系统，是对环境和软件的包装 container(容器)：镜像]]></description>
+    <description><![CDATA[<h1 id="docker使用教程">Docker使用教程</h1>
+<h2 id="docker架构">Docker架构</h2>
+<ul>
+<li>image(镜像)：可以看作是一个root文件系统，是对环境和软件的包装</li>
+<li>container(容器)：镜像类似于类，容器类似于实例</li>
+<li>repository(仓库)：镜像库</li>
+</ul>
+<h2 id="docker基本使用">Docker基本使用</h2>
+<h3 id="启动本地dokcer软件">启动本地dokcer软件</h3>
+<ul>
+<li>sudo systemctl start docker</li>
+</ul>
+<h3 id="通用">通用</h3>
+<ul>
+<li>查看所占空间<code>docker system df</code></li>
+</ul>
+<h3 id="repository使用">repository使用</h3>
+<ul>
+<li>获取image<code>docker pull [选项] [仓库地址[:端口号]/仓库名[:标签]]</code>
+<ul>
+<li>不加仓库地址，默认为docker hub</li>
+</ul>
+</li>
+</ul>
+<h3 id="image管理">image管理</h3>
+<ul>
+<li>列出本机的image文件:<code>docker image ls</code></li>
+<li>根据容器生成image文件:<code>docker commit [选项] &lt;容器名ID或容器名&gt; [&lt;仓库名&gt;[:&lt;标签&gt;]]</code></li>
+<li>删除本机的image文件:<code>docker image rm [imageName]</code></li>
+<li>删除所有处于停止状态的image:<code>docker image prune</code></li>
+</ul>
+<h3 id="container管理">container管理</h3>
+<h4 id="文件管理">文件管理</h4>
+<ul>
+<li>列出本机运行的container文件:<code>docker container ls</code></li>
+<li>列出本机所有的container文件:<code>docker container ls --all</code></li>
+<li>导出容器:<code>docker export &lt;containerID&gt; &gt; *.tar</code></li>
+<li>导入容器:<code>docker import *.tar &lt;镜像名&gt;:&lt;标签&gt;</code></li>
+<li>删除本机的container文件:<code>docker container rm &lt;containerID&gt;</code></li>
+<li>清理所有处于停止状态的容器:<code>docker container prune</code></li>
+</ul>
+<h4 id="运行管理">运行管理</h4>
+<ul>
+<li>启动容器:<code>docker run [选项] [imageName] [sh终端]</code>
+<ul>
+<li>选项可以省略</li>
+<li><code>-p 本地端口号：docker端口号</code>端口映射</li>
+<li><code>-d</code>后台运行不进入</li>
+<li><code>-i</code>是允许交互式操作</li>
+<li><code>-t</code>是终端</li>
+</ul>
+</li>
+<li>进入容器:<code>docker exec -it &lt;容器名/id&gt; [sh终端]</code></li>
+<li>终止容器:<code>docker container stop &lt;容器名/id&gt;</code></li>
+<li>启动已终止容器:<code>docker container start &lt;容器名/id&gt;</code></li>
+<li>重启容器:<code>docker container restart &lt;容器名/id&gt;</code></li>
+</ul>
+<h3 id="网络管理">网络管理</h3>
+<h4 id="概述">概述</h4>
+<p>Docker容器的网络允许容器间、容器与宿主机、以及容器与外部网络的通信。
+Docker默认提供几种网络模式：bridge（桥接模式）、host（主机模式）、none（无网络）和overlay（覆盖网络）。</p>]]></description>
 </item>
 <item>
     <title>Tmux使用教程</title>
@@ -26,7 +270,35 @@
     <pubDate>Tue, 05 Jul 2022 11:27:28 &#43;0800</pubDate>
     <author>loveLzz</author>
     <guid>https://leviathanion.github.io/tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[Tmux使用教程 会话管理 新建会话tmux new -s &lt;session-name&gt; 列出所有会话tmux ls或者Ctrl+b s 退出会话tmux detach或者Ctrl+b d 接入会]]></description>
+    <description><![CDATA[<h1 id="tmux使用教程">Tmux使用教程</h1>
+<h2 id="会话管理">会话管理</h2>
+<ul>
+<li>新建会话<code>tmux new -s &lt;session-name&gt;</code></li>
+<li>列出所有会话<code>tmux ls</code>或者<code>Ctrl+b s</code></li>
+<li>退出会话<code>tmux detach</code>或者<code>Ctrl+b d</code></li>
+<li>接入会话<code>tmux attach -t &lt;编号&gt;/&lt;session-name&gt;</code></li>
+<li>杀死对话<code>tmux kill-session -t &lt;编号&gt;/&lt;session-name&gt;</code></li>
+<li>切换会话<code>tmux switch -t &lt;编号&gt;/&lt;session-name&gt;</code></li>
+<li>重命名会话<code>tmux rename-session -t &lt;编号&gt;/&lt;session-name&gt;</code>或者<code>Ctrl+b $</code></li>
+</ul>
+<h2 id="窗口管理">窗口管理</h2>
+<ul>
+<li>创建一个新的窗口<code>Ctrl+b c</code></li>
+<li>列出所有窗口<code>Ctrl+b w</code></li>
+<li>重命名当前窗口<code>Ctrl+b ,</code></li>
+</ul>
+<h2 id="窗格管理">窗格管理</h2>
+<ul>
+<li>划分左右两个窗格<code>Ctrl+b %</code></li>
+<li>划分上下两个窗格<code>Ctrl+b &quot;</code></li>
+<li>移动窗格<code>Ctrl+b 方向键</code></li>
+<li>关闭当前窗格<code>Ctrl+b x</code></li>
+<li>调整窗格大小<code>Ctrl+b Ctrl+方向键</code></li>
+</ul>
+<h2 id="使用技巧">使用技巧</h2>
+<ul>
+<li>鼠标支持<code>Ctrl + b :set mouse on</code></li>
+</ul>]]></description>
 </item>
 <item>
     <title>Git使用教程</title>
@@ -34,7 +306,12 @@
     <pubDate>Mon, 25 Jan 2021 20:53:07 &#43;0800</pubDate>
     <author>loveLZZ</author>
     <guid>https://leviathanion.github.io/git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[Git使用教程 基本概念 git将本地文件的管理分为三个区域工作区，暂存区，仓库区，同时可以通过远程代码仓库等服务器来管理git如下图所示 git]]></description>
+    <description><![CDATA[<h1 id="git使用教程">Git使用教程</h1>
+<h2 id="基本概念">基本概念</h2>
+<ul>
+<li>git将本地文件的管理分为三个区域<strong>工作区</strong>，<strong>暂存区</strong>，<strong>仓库区</strong>，同时可以通过<strong>远程代码仓库</strong>等服务器来管理git如下图所示</li>
+</ul>
+<p><figure><a class="lightgallery" href="/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/gitoverview.png" title="git分区" data-thumbnail="/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/gitoverview.png" data-sub-html="<h2>git总览</h2><p>git分区</p>]]></description>
 </item>
 </channel>
 </rss>

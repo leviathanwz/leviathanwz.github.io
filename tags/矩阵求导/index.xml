@@ -10,7 +10,9 @@
     <pubDate>Wed, 19 Jan 2022 11:11:45 &#43;0800</pubDate>
     <author>loveLZZ</author>
     <guid>https://leviathanion.github.io/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/</guid>
-    <description><![CDATA[矩阵求导 分子布局和分母布局 标量，向量，矩阵之间的求导，相对于标量对标量的求导，需要考虑一个额外的因素，就是求导之后的布局，例如标量对列向量求]]></description>
+    <description><![CDATA[<h1 id="矩阵求导">矩阵求导</h1>
+<h2 id="分子布局和分母布局">分子布局和分母布局</h2>
+<p>标量，向量，矩阵之间的求导，相对于标量对标量的求导，需要考虑一个额外的因素，就是求导之后的布局，例如标量对列向量求导之后是按照列向量排列还是按照行向量排列并没有一个确切的规定。因此这里我们引入分子布局和分母布局的概念。</p>]]></description>
 </item>
 </channel>
 </rss>

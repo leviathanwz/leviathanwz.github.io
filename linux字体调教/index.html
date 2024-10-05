@@ -7,7 +7,8 @@
         <title>Linux字体调教 - loveLZZ的个人博客</title><meta name="Description" content="loveLZZ的个人博客"><meta property="og:url" content="https://leviathanion.github.io/linux%E5%AD%97%E4%BD%93%E8%B0%83%E6%95%99/">
   <meta property="og:site_name" content="loveLZZ的个人博客">
   <meta property="og:title" content="Linux字体调教">
-  <meta property="og:description" content="Linux字体调教 本文参考自12 具体字体配置 使用pacman安装字体,或将其放到指定目录中 执行fc-cache -fv更新字体缓存 对于不支持f">
+  <meta property="og:description" content="Linux字体调教 本文参考自12
+具体字体配置 使用pacman安装字体,或将其放到指定目录中 执行fc-cache -fv更新字体缓存 对于不支持fontconfig的旧程序 在字体目录创建索引mkfontscale mkfontdir 执行xset &#43;fp $dir添加字体目录 xset fp rehash强制刷新 xlsfonts | grep fontname查看是否生效 或者在/etc/X11/xorg.conf添加以下代码 1 2 3 4 5 6 7 # 让X.org知道自定义字体目录 Section &#34;Files&#34; FontPath &#34;/usr/share/fonts/100dpi&#34; FontPath &#34;/usr/share/fonts/75dpi&#34; FontPath &#34;/usr/share/fonts/TTF&#34; FontPath &#34;/usr/share/fonts/util&#34; EndSection fc-match [程序名]/[字体名]查看fontconfig为该程序或该字体匹配的字体 前瞻知识 一个字体文件，可以提供多个字体族名 (family)。 比如 Arch Linux 用户在安装 wqy-microhei 后">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -19,7 +20,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://leviathanion.github.io/">
   <meta name="twitter:title" content="Linux字体调教">
-  <meta name="twitter:description" content="Linux字体调教 本文参考自12 具体字体配置 使用pacman安装字体,或将其放到指定目录中 执行fc-cache -fv更新字体缓存 对于不支持f">
+  <meta name="twitter:description" content="Linux字体调教 本文参考自12
+具体字体配置 使用pacman安装字体,或将其放到指定目录中 执行fc-cache -fv更新字体缓存 对于不支持fontconfig的旧程序 在字体目录创建索引mkfontscale mkfontdir 执行xset &#43;fp $dir添加字体目录 xset fp rehash强制刷新 xlsfonts | grep fontname查看是否生效 或者在/etc/X11/xorg.conf添加以下代码 1 2 3 4 5 6 7 # 让X.org知道自定义字体目录 Section &#34;Files&#34; FontPath &#34;/usr/share/fonts/100dpi&#34; FontPath &#34;/usr/share/fonts/75dpi&#34; FontPath &#34;/usr/share/fonts/TTF&#34; FontPath &#34;/usr/share/fonts/util&#34; EndSection fc-match [程序名]/[字体名]查看fontconfig为该程序或该字体匹配的字体 前瞻知识 一个字体文件，可以提供多个字体族名 (family)。 比如 Arch Linux 用户在安装 wqy-microhei 后">
 <meta name="application-name" content="loveLZZ的个人博客">
 <meta name="apple-mobile-web-app-title" content="loveLZZ的个人博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://leviathanion.github.io/linux%E5%AD%97%E4%BD%93%E8%B0%83%E6%95%99/" /><link rel="prev" href="https://leviathanion.github.io/vim%E9%80%9F%E6%9F%A5%E8%A1%A8/" /><link rel="next" href="https://leviathanion.github.io/ubuntu%E9%85%8D%E7%BD%AE/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="SD6c9n666kMvMODF_Z2kC7C36DuHWBr3Q7FYNpXPYDM" /><meta name="baidu-site-verification" content="codeva-NCtxeKmI6G" /><script type="application/ld+json">
     {
@@ -647,7 +649,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">loveLzz</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
